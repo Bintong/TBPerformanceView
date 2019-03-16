@@ -25,7 +25,7 @@ A collection of tools for iOS device performance persistence to detect and evalu
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'https://github.com/Bintong' => 'yaxun_123@163.com' }
-  s.source           = { :git => 'git@github.com:Bintong/TBPerformanceView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Bintong/TBPerformanceView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
