@@ -1,6 +1,5 @@
 # TBPerformanceView
 
-[![CI Status](https://img.shields.io/travis/https://github.com/Bintong/TBCoreAnimation.git/TBPerformanceView.svg?style=flat)](https://travis-ci.org/https://github.com/Bintong/TBCoreAnimation.git/TBPerformanceView)
 [![Version](https://img.shields.io/cocoapods/v/TBPerformanceView.svg?style=flat)](https://cocoapods.org/pods/TBPerformanceView)
 [![License](https://img.shields.io/cocoapods/l/TBPerformanceView.svg?style=flat)](https://cocoapods.org/pods/TBPerformanceView)
 [![Platform](https://img.shields.io/cocoapods/p/TBPerformanceView.svg?style=flat)](https://cocoapods.org/pods/TBPerformanceView)
@@ -22,7 +21,7 @@ pod 'TBPerformanceView'
 
 ## Author
 
-https://github.com/Bintong/TBCoreAnimation.git, tongbin@xiaozhu.com
+yaxun_123@163.com
 
 ## License
 
