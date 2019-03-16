@@ -1,0 +1,6 @@
+framework module Pods_TBPerformanceView_Tests {
+  umbrella header "Pods-TBPerformanceView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

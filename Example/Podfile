@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'TBPerformanceView_Example' do
+  pod 'TBPerformanceView', :path => '../'
+
+  target 'TBPerformanceView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

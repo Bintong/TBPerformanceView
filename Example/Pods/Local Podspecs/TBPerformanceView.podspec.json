@@ -1,0 +1,26 @@
+{
+  "name": "TBPerformanceView",
+  "version": "0.1.0",
+  "summary": "A short description of TBPerformanceView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/https://github.com/Bintong/TBCoreAnimation.git/TBPerformanceView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "https://github.com/Bintong/TBCoreAnimation.git": "tongbin@xiaozhu.com"
+  },
+  "source": {
+    "git": "https://github.com/https://github.com/Bintong/TBCoreAnimation.git/TBPerformanceView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TBPerformanceView/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "MapKit"
+  ]
+}
