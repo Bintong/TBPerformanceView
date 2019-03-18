@@ -93,7 +93,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 
 
 - (void)createShowView:(UIView *)view{
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(1, 50, [UIScreen mainScreen].bounds.size.width - 2, 25)];
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(1, 50, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];
     _boardView = topView;
     topView.backgroundColor = [UIColor blackColor];
     topView.layer.cornerRadius = 4;
@@ -142,6 +142,9 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     NSString *string;
     if (_type == PB_DeviceInfo) {
         string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMERY:%0.2fMb; FPS:%0.2f \n app_version:%@ / ios : %@",cpuUse,memeryUse,fps,app_version,ios_version];
+        _topLabel.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 100, 50);
+        _topLabel.numberOfLines = 0;
+        _topLabel.textAlignment = NSTextAlignmentCenter;
     }else {
         string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMERY:%0.2fMb; FPS:%0.2f",cpuUse,memeryUse,fps];
     }
