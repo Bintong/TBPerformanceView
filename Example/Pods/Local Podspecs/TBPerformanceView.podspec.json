@@ -1,19 +1,19 @@
 {
   "name": "TBPerformanceView",
-  "version": "0.1.0",
-  "summary": "A short description of TBPerformanceView.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/https://github.com/Bintong/TBCoreAnimation.git/TBPerformanceView",
+  "version": "0.1.0.1",
+  "summary": "About iOS Performance tools",
+  "description": "A collection of tools for iOS device performance persistence to detect and evaluate component development performance, device processes",
+  "homepage": "https://github.com/Bintong/TBPerformanceView",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "https://github.com/Bintong/TBCoreAnimation.git": "tongbin@xiaozhu.com"
+    "https://github.com/Bintong": "yaxun_123@163.com"
   },
   "source": {
-    "git": "https://github.com/https://github.com/Bintong/TBCoreAnimation.git/TBPerformanceView.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Bintong/TBPerformanceView.git",
+    "tag": "0.1.0.1"
   },
   "platforms": {
     "ios": "8.0"

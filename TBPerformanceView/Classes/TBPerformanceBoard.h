@@ -15,10 +15,26 @@ NS_ASSUME_NONNULL_BEGIN
 + (TBPerformanceBoard *)sharedInstance;
 
 
+/**
+ create Board On View
+
+ @param view Up on view
+ */
 - (void)createPeroformanceBoardUpOnView:(UIView *)view ;
 
+
+- (void)createPeroformanceWithDeviceInfo:(UIView *)view;
+
+
+
+/**
+ begin display link
+ */
 - (void)open;
 
+/**
+ stop display link
+ */
 - (void)close;
 
 @end

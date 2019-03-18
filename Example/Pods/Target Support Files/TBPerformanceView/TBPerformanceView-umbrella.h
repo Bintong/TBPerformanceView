@@ -11,6 +11,7 @@
 #endif
 
 #import "TBCupUse.h"
+#import "TBDeviceInfo.h"
 #import "TBMemeryUse.h"
 #import "TBPerformanceBoard.h"
 

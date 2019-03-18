@@ -1,5 +1,5 @@
 PODS:
-  - TBPerformanceView (0.1.0)
+  - TBPerformanceView (0.1.0.1)
 
 DEPENDENCIES:
   - TBPerformanceView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TBPerformanceView: 09c61077b830d1d2662862f06a62a28e58a24d03
+  TBPerformanceView: 1d958326053dd659e77e17c5d90fdba3bd79823d
 
 PODFILE CHECKSUM: 5517f9fa390b6fa39190a695a85db98bb0a5923e
 

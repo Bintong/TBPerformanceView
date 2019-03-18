@@ -10,8 +10,15 @@
 
 #import "TBCupUse.h"
 #import "TBMemeryUse.h"
+#import "TBDeviceInfo.h"
 //#import "TBNetReachability.h"
 //#import "AppDelegate.h"
+
+
+typedef NS_ENUM(NSInteger, PerformanceBoardType) {
+    PB_Normarl = 0,                         // no button type
+    PB_DeviceInfo
+};
 
 @interface TBPerformanceBoard()
 
@@ -21,6 +28,8 @@
 
 @property (assign, nonatomic) NSTimeInterval lastTime;
 @property (assign, nonatomic) NSUInteger count;
+
+@property (assign, nonatomic) PerformanceBoardType type;
 
 @end
 
@@ -55,9 +64,20 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)createPeroformanceWithDeviceInfo:(UIView *)view {
+    if (_displayLink && (!_displayLink.paused)) {
+        _displayLink.paused = YES;
+    }
+    _type = PB_DeviceInfo;
+    [self createPeroformanceBoardUpOnView:view];
+}
+
 
 - (void)createPeroformanceBoardUpOnView:(UIView *)view {
     
+    if (_displayLink && (!_displayLink.paused)) {
+        _displayLink.paused = YES;
+    }
     [self createShowView:view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
@@ -69,9 +89,6 @@
     [_displayLink setPaused:YES];
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     
-    
-    
-   
 }
 
 
@@ -119,9 +136,16 @@
 - (void)takeReadingsFromFps:(CGFloat)fps {
     float cpuUse =  [[TBCupUse sharedInstance] cpuUse];
     float memeryUse = [[TBMemeryUse sharedInstance] usedMemoryInMB];
+    NSString *app_version = [TBDeviceInfo applicationVersion];
+    NSString *ios_version = [TBDeviceInfo phoneSystemVersion];
     //    [TBNetReachability socketReachabilityTestWithLink:disLink];
+    NSString *string;
+    if (_type == PB_DeviceInfo) {
+        string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMERY:%0.2fMb; FPS:%0.2f \n app_version:%@ / ios : %@",cpuUse,memeryUse,fps,app_version,ios_version];
+    }else {
+        string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMERY:%0.2fMb; FPS:%0.2f",cpuUse,memeryUse,fps];
+    }
     
-    NSString *string = [NSString stringWithFormat:@"cpu:%0.2f%%;memery:%0.2fMb;fps:%0.2f",cpuUse,memeryUse,fps];
     _topLabel.text = string;
     
 }
