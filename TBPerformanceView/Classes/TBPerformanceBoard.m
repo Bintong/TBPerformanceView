@@ -141,7 +141,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     //    [TBNetReachability socketReachabilityTestWithLink:disLink];
     NSString *string;
     if (_type == PB_DeviceInfo) {
-        string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMERY:%0.2fMb; FPS:%0.2f \n app_version:%@ / ios : %@",cpuUse,memeryUse,fps,app_version,ios_version];
+        string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMORY:%0.2fMb; FPS:%0.2f \n AppVersion:%@ / iOS : %@",cpuUse,memeryUse,fps,app_version,ios_version];
         _topLabel.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 100, 50);
         _topLabel.numberOfLines = 0;
         _topLabel.textAlignment = NSTextAlignmentCenter;
