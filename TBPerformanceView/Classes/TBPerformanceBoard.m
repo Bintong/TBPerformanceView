@@ -150,7 +150,6 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     }
     
     _topLabel.text = string;
-    
 }
 
 - (UILabel *)labelWithFontSize:(CGFloat)fontSize FontColor:(UIColor *)fontColor  frame:(CGRect)frame Text:(NSString *)text{
@@ -162,6 +161,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     lbTitle.text = text;
     return lbTitle;
 }
+
 - (void)applicationDidBecomeActiveNotification:(NSNotificationCenter *)notification {
     [self.displayLink setPaused:NO];
 }

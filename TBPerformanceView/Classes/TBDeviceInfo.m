@@ -18,4 +18,9 @@
     return [currentDevice() systemVersion];
 }
 
++ (CGFloat)batteryLevel {
+    currentDevice().batteryMonitoringEnabled = YES;
+    return [currentDevice() batteryLevel];
+}
+
 @end

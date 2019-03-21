@@ -26,6 +26,14 @@
  */
 + (NSString *)phoneSystemVersion;
 
+
+/**
+ 电池状态
+ 
+ @return 电池状态
+ */
++ (CGFloat)batteryLevel;
+
 @end
 
 NS_INLINE NSDictionary * appInfoDictionary (void){
