@@ -11,13 +11,15 @@
 #import "TBCupUse.h"
 #import "TBMemeryUse.h"
 #import "TBDeviceInfo.h"
+#import "TPerformanceDetailController.h"
 //#import "TBNetReachability.h"
 //#import "AppDelegate.h"
 
 
 typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     PB_Normarl = 0,                         // no button type
-    PB_DeviceInfo
+    PB_DeviceInfo,
+    PB_Detail
 };
 
 @interface TBPerformanceBoard()
@@ -25,6 +27,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 @property (strong ,nonatomic) CADisplayLink *displayLink;
 @property (strong ,nonatomic) UIView *boardView;
 @property (strong ,nonatomic) UILabel *topLabel;
+@property (strong ,nonatomic) UIViewController *rootViewController;
 
 @property (assign, nonatomic) NSTimeInterval lastTime;
 @property (assign, nonatomic) NSUInteger count;
@@ -91,6 +94,26 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     
 }
 
+
+- (void)createClickPeroformanceWithDeviceInfo:(UIViewController *)ctr {
+    if (_displayLink && (!_displayLink.paused)) {
+        _displayLink.paused = YES;
+    }
+    _type = PB_Detail;
+    [self createPeroformanceBoardUpOnView:ctr.view.window];
+    _rootViewController = ctr;
+    _type = PB_Detail;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDetail)];
+    [self.boardView addGestureRecognizer:tap];
+    
+}
+
+
+- (void)pushToDetail {
+    TPerformanceDetailController *c = [[TPerformanceDetailController alloc] init];
+//    UINavigationController *v = [[UINavigationController alloc] initWithRootViewController:self]
+    [self.rootViewController.navigationController pushViewController:c animated:YES];
+}
 
 - (void)createShowView:(UIView *)view{
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(1, 50, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];

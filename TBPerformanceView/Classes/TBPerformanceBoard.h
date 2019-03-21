@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)createPeroformanceWithDeviceInfo:(UIView *)view;
 
+- (void)createClickPeroformanceWithDeviceInfo:(UIViewController *)ctr;
+
 
 
 /**
