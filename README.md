@@ -49,6 +49,19 @@ TBPerformanceView is available under the MIT license. See the LICENSE file for m
 [[TBPerformanceBoard sharedInstance] open];
 ```
 
+
+
+方法列表
+
+| 方法名称                                                    | 说明                                        |
+| :---------------------------------------------------------- | ------------------------------------------- |
+| - (**void**)createPeroformanceBoardUpOnView:(UIView *)view  | 在当前view 上添加普通版本的board            |
+| - (**void**)createPeroformanceWithDeviceInfo:(UIView *)view | 在当前view 上添加普通版本的版本号版本的view |
+| - (**void**)open;                                           | 开始监听                                    |
+| - (**void**)close;                                          | 关闭监听                                    |
+
+
+
 ### 安装
 
 TBPerformanceView可通过[CocoaPods]（https://cocoapods.org）获得。 安装
