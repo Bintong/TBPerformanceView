@@ -29,4 +29,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)injected{
+    [self viewDidLoad];
+}
+
 @end
