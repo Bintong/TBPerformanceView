@@ -7,24 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		038A8693A138FF64AE226AE6600CB471 /* TBDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2113C864C481FE6829D59D86BB3EDA /* TBDeviceInfo.m */; };
 		0E673DE5D4E026C0CA45973B153FD5D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FC5B64354078279927964A795D8D1C /* Foundation.framework */; };
 		12844FB6D9E76E1FAA8EA8546C2E3BB8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805A377FEB75EAD29F063A0A07513C3E /* MapKit.framework */; };
-		25BC57AA0E6395FD7E0F7E1BAA5FC09E /* TBPerformanceBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 696221842EC8309999ACD2968F15095B /* TBPerformanceBoard.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B0070AD5D79C032A9F97AA6B5ECB83A /* TBCupUse.m in Sources */ = {isa = PBXBuildFile; fileRef = 781848878FFEE4620C177F87B3B25B67 /* TBCupUse.m */; };
-		30E1968645D7A696618B22626107513C /* TBMemeryUse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2232460720FA063AF531885276FB42E4 /* TBMemeryUse.m */; };
+		1FCB0FE11A06018FFC283059AC73FAD6 /* TBPerformanceBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F8D4F5B85DC9563279F2404A6AF1CA26 /* TBPerformanceBoard.m */; };
 		347E1E4D2C3C03AA8319B2637E3E443F /* Pods-TBPerformanceView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EDD9E2CC30521C87025866C9FBE4AF /* Pods-TBPerformanceView_Example-dummy.m */; };
 		3538D20E1BAD6215A7FE000B9AA843FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FC5B64354078279927964A795D8D1C /* Foundation.framework */; };
-		398B0C66EC53AA00C743402E1AEF37B7 /* TBDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D35877E09EF105E19985F689BCA1EEB /* TBDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4177767602609EFC5C862CC131F1B983 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CCBCE02A078B27A4E4EBEFBA662217 /* UIKit.framework */; };
-		6EB537843C446EBE7EDB3F36BEF060B0 /* TBPerformanceBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = AA429B93C5C868AE488B0BD501062FE0 /* TBPerformanceBoard.m */; };
+		43A849094E7A9E4604F8E090A6F82DC4 /* TBCupUse.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8D3546942418372E810EE1E5E60AA2 /* TBCupUse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45B5AE613762790410D8D288EC48A47C /* TPerformanceDetailController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF8928902BEADFE22474CCDE7B44AA6 /* TPerformanceDetailController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D9986DFA8437C385AF26976C1EADA7B /* TBMemeryUse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF8B849829952B0A3713D43FDA52C6 /* TBMemeryUse.m */; };
 		716BDE422500374721BA07BAFAE2447B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FC5B64354078279927964A795D8D1C /* Foundation.framework */; };
-		764A9A6B5A06C25C43F5CD92000C33B8 /* TBPerformanceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10613F92C1B99A55CDDEC7A8E0600D71 /* TBPerformanceView-dummy.m */; };
-		90ED89DFC3697799FFAFEFD2E8351A2B /* TBCupUse.h in Headers */ = {isa = PBXBuildFile; fileRef = FF4F01D076DDED5DAB7121E2C45CC9E8 /* TBCupUse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80B579E78B67FCB1C8530C2CEDE11FBC /* UIView+Coordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = 370057DE8C049AB7AA251C3C1BAB4B3B /* UIView+Coordinate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94C88DB8ACFC71FF5DB76EF7F3356BFF /* Pods-TBPerformanceView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3970C8DB402855CA1C11AC6DC70D3B6E /* Pods-TBPerformanceView_Tests-dummy.m */; };
-		A97C80E004FA1C7C78D7BE55D95C7527 /* TBMemeryUse.h in Headers */ = {isa = PBXBuildFile; fileRef = 36563AC5F6EB9AE9A4FD7E6AE51CBD24 /* TBMemeryUse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B65D242BE257E5167FE27E3F12EE6AAC /* TBPerformanceView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 024E73EF944183BF74ABE82879C98652 /* TBPerformanceView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95B2E76AB2A77159BFA4ECCCF37E4683 /* TBPerformanceView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D1A4A5FF4FC6A234D4A610761F94D48 /* TBPerformanceView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A5999F7CF350E65A70301FBE017C7ED /* TPerformanceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D106423336FE852D5C11F476D2CCC7B6 /* TPerformanceDetailController.m */; };
+		AA1B8FF6335201B63CD2E8786B215243 /* TBPerformanceBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 1306A39BBB6EE9956009134D3C59E08E /* TBPerformanceBoard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9C9621801B5F60A0810BF25246376F4 /* UIView+Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA561B323F90768A93C19D489BFAA2D3 /* UIView+Coordinate.m */; };
+		BB0E2B55F12ED0B895415413A092128F /* TBPerformanceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A2789E104E9977BC086E1B4D1B55CFA /* TBPerformanceView-dummy.m */; };
+		C616C1214CB545AEFE09E81B2C22B873 /* TBCupUse.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CE4FF7FF7234A143A4C89954CE5A3C /* TBCupUse.m */; };
+		D0983F72D7213996E46667B16A86AAF8 /* TBDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1390A9C11A50FDD2EC45374F340ED64B /* TBDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC538D7DCE20F74236B9B4127E6DE2C3 /* Pods-TBPerformanceView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E470EE0767DFB420F364961373A18852 /* Pods-TBPerformanceView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EACFB78EB6A6A3EC5E0F4C099769DCEA /* TBDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5D2CD1D23CBEF0D6B316A40157EEED /* TBDeviceInfo.m */; };
+		EBEFCF0AA8819021CFB0C33BED73F065 /* TBMemeryUse.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A58BF8A2EFCDD6242DBB7EABC37547D /* TBMemeryUse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFB66FAE0E32F9822C20D1A4F98DE09E /* Pods-TBPerformanceView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 692ABE4CCC30955062EC693FE767F883 /* Pods-TBPerformanceView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,50 +50,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		024E73EF944183BF74ABE82879C98652 /* TBPerformanceView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBPerformanceView-umbrella.h"; sourceTree = "<group>"; };
-		0B4E433AB34433F1648006ED64FD593E /* TBPerformanceView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBPerformanceView-prefix.pch"; sourceTree = "<group>"; };
-		10613F92C1B99A55CDDEC7A8E0600D71 /* TBPerformanceView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBPerformanceView-dummy.m"; sourceTree = "<group>"; };
-		120A882E0CF8BCF6AF2A415D9889BA7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0DCC3929764C2528C425CF012679DAFB /* TBPerformanceView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TBPerformanceView.modulemap; sourceTree = "<group>"; };
+		1306A39BBB6EE9956009134D3C59E08E /* TBPerformanceBoard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBPerformanceBoard.h; path = TBPerformanceView/Classes/TBPerformanceBoard.h; sourceTree = "<group>"; };
+		1390A9C11A50FDD2EC45374F340ED64B /* TBDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBDeviceInfo.h; path = TBPerformanceView/Classes/TBDeviceInfo.h; sourceTree = "<group>"; };
 		1412E923DBD5649D24932F85ABDD3251 /* TBPerformanceView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TBPerformanceView.framework; path = TBPerformanceView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2789E104E9977BC086E1B4D1B55CFA /* TBPerformanceView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBPerformanceView-dummy.m"; sourceTree = "<group>"; };
 		1B01485DCF237A3C6E04411DB892B4E9 /* Pods-TBPerformanceView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TBPerformanceView_Tests.modulemap"; sourceTree = "<group>"; };
 		1DCABEA4E4D25A63A9C9A68AAFA0BC0A /* Pods-TBPerformanceView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBPerformanceView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F6B8720F804DB5605CF975F53C44141 /* Pods-TBPerformanceView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBPerformanceView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		1FC3684D9A24F3A229570AA70A14B335 /* Pods-TBPerformanceView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBPerformanceView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		2232460720FA063AF531885276FB42E4 /* TBMemeryUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBMemeryUse.m; path = TBPerformanceView/Classes/TBMemeryUse.m; sourceTree = "<group>"; };
 		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		29D167DBA2FEA5B1363FDB0A6BAE8A62 /* Pods-TBPerformanceView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TBPerformanceView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2D24CAAA56A29CB40B6C513939688EBF /* Pods-TBPerformanceView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TBPerformanceView_Example.modulemap"; sourceTree = "<group>"; };
 		30D604AE5D4028BD2D2C0E91AFC22BC3 /* Pods-TBPerformanceView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBPerformanceView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		31E1A44E792EC7F0CA33D2A56C7BEEA1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3402CD1429CEEEB7A47B00C895045230 /* Pods-TBPerformanceView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBPerformanceView_Example-resources.sh"; sourceTree = "<group>"; };
-		36563AC5F6EB9AE9A4FD7E6AE51CBD24 /* TBMemeryUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBMemeryUse.h; path = TBPerformanceView/Classes/TBMemeryUse.h; sourceTree = "<group>"; };
 		36EAC286113EEFDCDC413B312682A9BB /* Pods-TBPerformanceView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBPerformanceView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		370057DE8C049AB7AA251C3C1BAB4B3B /* UIView+Coordinate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Coordinate.h"; path = "TBPerformanceView/Classes/UIView+Coordinate.h"; sourceTree = "<group>"; };
 		3970C8DB402855CA1C11AC6DC70D3B6E /* Pods-TBPerformanceView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TBPerformanceView_Tests-dummy.m"; sourceTree = "<group>"; };
+		3E5D2CD1D23CBEF0D6B316A40157EEED /* TBDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBDeviceInfo.m; path = TBPerformanceView/Classes/TBDeviceInfo.m; sourceTree = "<group>"; };
+		5BCF8B849829952B0A3713D43FDA52C6 /* TBMemeryUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBMemeryUse.m; path = TBPerformanceView/Classes/TBMemeryUse.m; sourceTree = "<group>"; };
 		5F6A34A510A0026C6BF4772608108881 /* Pods_TBPerformanceView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TBPerformanceView_Tests.framework; path = "Pods-TBPerformanceView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		606A24051366311BA1EC68D261C7A0C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60CE4FF7FF7234A143A4C89954CE5A3C /* TBCupUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBCupUse.m; path = TBPerformanceView/Classes/TBCupUse.m; sourceTree = "<group>"; };
 		6608B3654C45604D6FB29A8D8C565F44 /* Pods-TBPerformanceView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBPerformanceView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		692ABE4CCC30955062EC693FE767F883 /* Pods-TBPerformanceView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TBPerformanceView_Example-umbrella.h"; sourceTree = "<group>"; };
-		696221842EC8309999ACD2968F15095B /* TBPerformanceBoard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBPerformanceBoard.h; path = TBPerformanceView/Classes/TBPerformanceBoard.h; sourceTree = "<group>"; };
-		6D35877E09EF105E19985F689BCA1EEB /* TBDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBDeviceInfo.h; path = TBPerformanceView/Classes/TBDeviceInfo.h; sourceTree = "<group>"; };
-		75F31271BC952A56D73160DE3B619869 /* TBPerformanceView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TBPerformanceView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6D1A4A5FF4FC6A234D4A610761F94D48 /* TBPerformanceView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBPerformanceView-umbrella.h"; sourceTree = "<group>"; };
+		6D8D3546942418372E810EE1E5E60AA2 /* TBCupUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBCupUse.h; path = TBPerformanceView/Classes/TBCupUse.h; sourceTree = "<group>"; };
 		76EAF619CE770FCD6AB5229CB8383B01 /* Pods-TBPerformanceView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBPerformanceView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		781848878FFEE4620C177F87B3B25B67 /* TBCupUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBCupUse.m; path = TBPerformanceView/Classes/TBCupUse.m; sourceTree = "<group>"; };
+		7A58BF8A2EFCDD6242DBB7EABC37547D /* TBMemeryUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBMemeryUse.h; path = TBPerformanceView/Classes/TBMemeryUse.h; sourceTree = "<group>"; };
 		7BF44D90DDB2ECFF7ABC80B7F3ADF0DE /* Pods-TBPerformanceView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBPerformanceView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		7EF8928902BEADFE22474CCDE7B44AA6 /* TPerformanceDetailController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPerformanceDetailController.h; path = TBPerformanceView/Classes/TPerformanceDetailController.h; sourceTree = "<group>"; };
 		805A377FEB75EAD29F063A0A07513C3E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		81FD25B4CDEF70647993D7589B0A0E61 /* TBPerformanceView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TBPerformanceView.xcconfig; sourceTree = "<group>"; };
 		86C37BA9F273115170F4CF8ED5335DBF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B5433E2F2F36B8ADF1AF9AEC3861094 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		8F466978BFCBC786D716C5BC7698A6C6 /* Pods-TBPerformanceView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TBPerformanceView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A831D06C1D1E055BAAAE25BF5E6201 /* Pods-TBPerformanceView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBPerformanceView_Tests-resources.sh"; sourceTree = "<group>"; };
-		9A2113C864C481FE6829D59D86BB3EDA /* TBDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBDeviceInfo.m; path = TBPerformanceView/Classes/TBDeviceInfo.m; sourceTree = "<group>"; };
 		9AA2F8CA87A1CA78A9D06E5139465D34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4A4A6CB2FEEBC54DF7B358C4DEBA83D /* TBPerformanceView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TBPerformanceView.xcconfig; sourceTree = "<group>"; };
 		A7EDD9E2CC30521C87025866C9FBE4AF /* Pods-TBPerformanceView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TBPerformanceView_Example-dummy.m"; sourceTree = "<group>"; };
-		AA429B93C5C868AE488B0BD501062FE0 /* TBPerformanceBoard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBPerformanceBoard.m; path = TBPerformanceView/Classes/TBPerformanceBoard.m; sourceTree = "<group>"; };
 		B0CCBCE02A078B27A4E4EBEFBA662217 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B5FC5B64354078279927964A795D8D1C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		BA401E7C99BE5D586D4F58535E3E179A /* TBPerformanceView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TBPerformanceView.modulemap; sourceTree = "<group>"; };
 		BE05AB9043A3961FEF817DA5E4A2407A /* Pods_TBPerformanceView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TBPerformanceView_Example.framework; path = "Pods-TBPerformanceView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF97715FAAAE5718DD1480BAE7FE833 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C165A564AC1D4D8E81FDC0F38DA1B773 /* TBPerformanceView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBPerformanceView-prefix.pch"; sourceTree = "<group>"; };
+		D106423336FE852D5C11F476D2CCC7B6 /* TPerformanceDetailController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPerformanceDetailController.m; path = TBPerformanceView/Classes/TPerformanceDetailController.m; sourceTree = "<group>"; };
+		E2E4F678FF396E6494F37F74D7D5B2C1 /* TBPerformanceView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TBPerformanceView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E470EE0767DFB420F364961373A18852 /* Pods-TBPerformanceView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TBPerformanceView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		FF4F01D076DDED5DAB7121E2C45CC9E8 /* TBCupUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBCupUse.h; path = TBPerformanceView/Classes/TBCupUse.h; sourceTree = "<group>"; };
+		EC4956EF681BA49731C2E1B20B38D1FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F8D4F5B85DC9563279F2404A6AF1CA26 /* TBPerformanceBoard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBPerformanceBoard.m; path = TBPerformanceView/Classes/TBPerformanceBoard.m; sourceTree = "<group>"; };
+		FA561B323F90768A93C19D489BFAA2D3 /* UIView+Coordinate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Coordinate.m"; path = "TBPerformanceView/Classes/UIView+Coordinate.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +138,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		266FF5828F6D98AC416635A54C40E8A5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				31E1A44E792EC7F0CA33D2A56C7BEEA1 /* Info.plist */,
+				0DCC3929764C2528C425CF012679DAFB /* TBPerformanceView.modulemap */,
+				81FD25B4CDEF70647993D7589B0A0E61 /* TBPerformanceView.xcconfig */,
+				1A2789E104E9977BC086E1B4D1B55CFA /* TBPerformanceView-dummy.m */,
+				C165A564AC1D4D8E81FDC0F38DA1B773 /* TBPerformanceView-prefix.pch */,
+				6D1A4A5FF4FC6A234D4A610761F94D48 /* TBPerformanceView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TBPerformanceView";
+			sourceTree = "<group>";
+		};
 		2BA49B73C4F4E1B3417FF6B3BC6E96D6 /* Pods-TBPerformanceView_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,20 +170,6 @@
 			path = "Target Support Files/Pods-TBPerformanceView_Tests";
 			sourceTree = "<group>";
 		};
-		4623E90648A27720659D33C7AB871F06 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				606A24051366311BA1EC68D261C7A0C3 /* Info.plist */,
-				BA401E7C99BE5D586D4F58535E3E179A /* TBPerformanceView.modulemap */,
-				A4A4A6CB2FEEBC54DF7B358C4DEBA83D /* TBPerformanceView.xcconfig */,
-				10613F92C1B99A55CDDEC7A8E0600D71 /* TBPerformanceView-dummy.m */,
-				0B4E433AB34433F1648006ED64FD593E /* TBPerformanceView-prefix.pch */,
-				024E73EF944183BF74ABE82879C98652 /* TBPerformanceView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TBPerformanceView";
-			sourceTree = "<group>";
-		};
 		47C35B7037A2EAAAB00727B6ADB6E35E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +180,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		5561B486840AF55EF5D20041FE0E134B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1E45E0EB607947A05BB7C7672821892 /* TBPerformanceView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7E688B1D596322FF2C7AC405E93237E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,16 +196,6 @@
 				1412E923DBD5649D24932F85ABDD3251 /* TBPerformanceView.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AADFD7FFC14484611C58B75FEBFCDA55 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				CBF97715FAAAE5718DD1480BAE7FE833 /* LICENSE */,
-				120A882E0CF8BCF6AF2A415D9889BA7F /* README.md */,
-				75F31271BC952A56D73160DE3B619869 /* TBPerformanceView.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		B1C5708E166D4E6A131479676E304256 /* Targets Support Files */ = {
@@ -223,37 +229,43 @@
 			isa = PBXGroup;
 			children = (
 				24390EFD555DD124430DFF9724065945 /* Podfile */,
-				E941BC516CF048250055B69072539F45 /* Development Pods */,
+				5561B486840AF55EF5D20041FE0E134B /* Development Pods */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				7E688B1D596322FF2C7AC405E93237E5 /* Products */,
 				B1C5708E166D4E6A131479676E304256 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E359F0A6540E3A3F734392EEDC232A99 /* TBPerformanceView */ = {
+		D1E45E0EB607947A05BB7C7672821892 /* TBPerformanceView */ = {
 			isa = PBXGroup;
 			children = (
-				FF4F01D076DDED5DAB7121E2C45CC9E8 /* TBCupUse.h */,
-				781848878FFEE4620C177F87B3B25B67 /* TBCupUse.m */,
-				6D35877E09EF105E19985F689BCA1EEB /* TBDeviceInfo.h */,
-				9A2113C864C481FE6829D59D86BB3EDA /* TBDeviceInfo.m */,
-				36563AC5F6EB9AE9A4FD7E6AE51CBD24 /* TBMemeryUse.h */,
-				2232460720FA063AF531885276FB42E4 /* TBMemeryUse.m */,
-				696221842EC8309999ACD2968F15095B /* TBPerformanceBoard.h */,
-				AA429B93C5C868AE488B0BD501062FE0 /* TBPerformanceBoard.m */,
-				AADFD7FFC14484611C58B75FEBFCDA55 /* Pod */,
-				4623E90648A27720659D33C7AB871F06 /* Support Files */,
+				6D8D3546942418372E810EE1E5E60AA2 /* TBCupUse.h */,
+				60CE4FF7FF7234A143A4C89954CE5A3C /* TBCupUse.m */,
+				1390A9C11A50FDD2EC45374F340ED64B /* TBDeviceInfo.h */,
+				3E5D2CD1D23CBEF0D6B316A40157EEED /* TBDeviceInfo.m */,
+				7A58BF8A2EFCDD6242DBB7EABC37547D /* TBMemeryUse.h */,
+				5BCF8B849829952B0A3713D43FDA52C6 /* TBMemeryUse.m */,
+				1306A39BBB6EE9956009134D3C59E08E /* TBPerformanceBoard.h */,
+				F8D4F5B85DC9563279F2404A6AF1CA26 /* TBPerformanceBoard.m */,
+				7EF8928902BEADFE22474CCDE7B44AA6 /* TPerformanceDetailController.h */,
+				D106423336FE852D5C11F476D2CCC7B6 /* TPerformanceDetailController.m */,
+				370057DE8C049AB7AA251C3C1BAB4B3B /* UIView+Coordinate.h */,
+				FA561B323F90768A93C19D489BFAA2D3 /* UIView+Coordinate.m */,
+				EE975DA86CD810A5612704BAAEDEA2BD /* Pod */,
+				266FF5828F6D98AC416635A54C40E8A5 /* Support Files */,
 			);
 			name = TBPerformanceView;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		E941BC516CF048250055B69072539F45 /* Development Pods */ = {
+		EE975DA86CD810A5612704BAAEDEA2BD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				E359F0A6540E3A3F734392EEDC232A99 /* TBPerformanceView */,
+				EC4956EF681BA49731C2E1B20B38D1FF /* LICENSE */,
+				8B5433E2F2F36B8ADF1AF9AEC3861094 /* README.md */,
+				E2E4F678FF396E6494F37F74D7D5B2C1 /* TBPerformanceView.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,23 +279,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78A7827558046D08905CF33CE98872BB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90ED89DFC3697799FFAFEFD2E8351A2B /* TBCupUse.h in Headers */,
-				398B0C66EC53AA00C743402E1AEF37B7 /* TBDeviceInfo.h in Headers */,
-				A97C80E004FA1C7C78D7BE55D95C7527 /* TBMemeryUse.h in Headers */,
-				25BC57AA0E6395FD7E0F7E1BAA5FC09E /* TBPerformanceBoard.h in Headers */,
-				B65D242BE257E5167FE27E3F12EE6AAC /* TBPerformanceView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A93535805FAB0E7116005B4A1F8FF894 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DC538D7DCE20F74236B9B4127E6DE2C3 /* Pods-TBPerformanceView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D105E16FEC6BA841DD8F86ADFB7D1518 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A849094E7A9E4604F8E090A6F82DC4 /* TBCupUse.h in Headers */,
+				D0983F72D7213996E46667B16A86AAF8 /* TBDeviceInfo.h in Headers */,
+				EBEFCF0AA8819021CFB0C33BED73F065 /* TBMemeryUse.h in Headers */,
+				AA1B8FF6335201B63CD2E8786B215243 /* TBPerformanceBoard.h in Headers */,
+				95B2E76AB2A77159BFA4ECCCF37E4683 /* TBPerformanceView-umbrella.h in Headers */,
+				45B5AE613762790410D8D288EC48A47C /* TPerformanceDetailController.h in Headers */,
+				80B579E78B67FCB1C8530C2CEDE11FBC /* UIView+Coordinate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,8 +327,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 193EAFC69A09ED3B881060A2A6B4916E /* Build configuration list for PBXNativeTarget "TBPerformanceView" */;
 			buildPhases = (
-				78A7827558046D08905CF33CE98872BB /* Headers */,
-				3BF8464539AF06F8939C00846D10A5B3 /* Sources */,
+				D105E16FEC6BA841DD8F86ADFB7D1518 /* Headers */,
+				C6DFE63FED2BFE48A5F9CDA6D011BDDD /* Sources */,
 				AE590EA2D4669A5F18BE45837F302157 /* Frameworks */,
 				DDA28F16AB1B19BB53485BC8A694E20C /* Resources */,
 			);
@@ -399,18 +413,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3BF8464539AF06F8939C00846D10A5B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B0070AD5D79C032A9F97AA6B5ECB83A /* TBCupUse.m in Sources */,
-				038A8693A138FF64AE226AE6600CB471 /* TBDeviceInfo.m in Sources */,
-				30E1968645D7A696618B22626107513C /* TBMemeryUse.m in Sources */,
-				6EB537843C446EBE7EDB3F36BEF060B0 /* TBPerformanceBoard.m in Sources */,
-				764A9A6B5A06C25C43F5CD92000C33B8 /* TBPerformanceView-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5250718D53F5FA8DD60CEC4857ED2D3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,6 +426,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				347E1E4D2C3C03AA8319B2637E3E443F /* Pods-TBPerformanceView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6DFE63FED2BFE48A5F9CDA6D011BDDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C616C1214CB545AEFE09E81B2C22B873 /* TBCupUse.m in Sources */,
+				EACFB78EB6A6A3EC5E0F4C099769DCEA /* TBDeviceInfo.m in Sources */,
+				5D9986DFA8437C385AF26976C1EADA7B /* TBMemeryUse.m in Sources */,
+				1FCB0FE11A06018FFC283059AC73FAD6 /* TBPerformanceBoard.m in Sources */,
+				BB0E2B55F12ED0B895415413A092128F /* TBPerformanceView-dummy.m in Sources */,
+				9A5999F7CF350E65A70301FBE017C7ED /* TPerformanceDetailController.m in Sources */,
+				B9C9621801B5F60A0810BF25246376F4 /* UIView+Coordinate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +592,7 @@
 		};
 		64AE25CFAC7177C19C56988044491476 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4A4A6CB2FEEBC54DF7B358C4DEBA83D /* TBPerformanceView.xcconfig */;
+			baseConfigurationReference = 81FD25B4CDEF70647993D7589B0A0E61 /* TBPerformanceView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -706,7 +722,7 @@
 		};
 		C970B2ABEFC20B1EFB93B2605A5B9398 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4A4A6CB2FEEBC54DF7B358C4DEBA83D /* TBPerformanceView.xcconfig */;
+			baseConfigurationReference = 81FD25B4CDEF70647993D7589B0A0E61 /* TBPerformanceView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

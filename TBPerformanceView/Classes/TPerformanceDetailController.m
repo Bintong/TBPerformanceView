@@ -7,6 +7,7 @@
 
 #import "TPerformanceDetailController.h"
 #import "UIView+Coordinate.h"
+#import "TBDirctoryController.h"
 @interface TPerformanceDetailController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@"沙河路径",@"网络请求",@"",@"列表渲染"];
+    self.dataArray = @[@"沙盒路径",@"网络请求",@"",@"列表渲染"];
     [self buildTableView];
     
     // Do any additional setup after loading the view.
@@ -67,7 +68,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *ctr ;
     if (indexPath.row == 0) {
-//        ctr = [[SculptNormlTextController alloc] init];
+        ctr = [[TBDirctoryController alloc] init];
     }else if(indexPath.row == 1){
 //        ctr = [[SculptDrawImgController alloc] init];
     }else if(indexPath.row == 2){

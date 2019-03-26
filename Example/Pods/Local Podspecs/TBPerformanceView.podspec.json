@@ -1,6 +1,6 @@
 {
   "name": "TBPerformanceView",
-  "version": "0.1.0.1",
+  "version": "0.1.0.2",
   "summary": "About iOS Performance tools",
   "description": "A collection of tools for iOS device performance persistence to detect and evaluate component development performance, device processes",
   "homepage": "https://github.com/Bintong/TBPerformanceView",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Bintong/TBPerformanceView.git",
-    "tag": "0.1.0.1"
+    "tag": "0.1.0.2"
   },
   "platforms": {
     "ios": "8.0"

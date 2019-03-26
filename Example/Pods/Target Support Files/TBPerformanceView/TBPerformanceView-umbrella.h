@@ -14,6 +14,8 @@
 #import "TBDeviceInfo.h"
 #import "TBMemeryUse.h"
 #import "TBPerformanceBoard.h"
+#import "TPerformanceDetailController.h"
+#import "UIView+Coordinate.h"
 
 FOUNDATION_EXPORT double TBPerformanceViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char TBPerformanceViewVersionString[];

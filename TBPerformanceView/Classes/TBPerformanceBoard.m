@@ -28,19 +28,14 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 @property (strong ,nonatomic) UIView *boardView;
 @property (strong ,nonatomic) UILabel *topLabel;
 @property (strong ,nonatomic) UIViewController *rootViewController;
-
 @property (assign, nonatomic) NSTimeInterval lastTime;
 @property (assign, nonatomic) NSUInteger count;
-
 @property (assign, nonatomic) PerformanceBoardType type;
 
 @end
 
 
 @implementation TBPerformanceBoard
-
-
-
 
 - (void)dealloc {
     [_displayLink setPaused:YES];

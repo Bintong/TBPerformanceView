@@ -22,11 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)createPeroformanceBoardUpOnView:(UIView *)view ;
 
-
 - (void)createPeroformanceWithDeviceInfo:(UIView *)view;
 
 - (void)createClickPeroformanceWithDeviceInfo:(UIViewController *)ctr;
-
 
 
 /**
