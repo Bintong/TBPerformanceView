@@ -31,7 +31,7 @@ A collection of tools for iOS device performance persistence to detect and evalu
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'TBPerformanceView/Classes/**/*'
-  
+  s.prefix_header_file = 'TBPerformanceView/Classes/PrefixHeader.pch'
   # s.resource_bundles = {
   #   'TBPerformanceView' => ['TBPerformanceView/Assets/*.png']
   # }
