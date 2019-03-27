@@ -8,6 +8,8 @@
 #import "TPerformanceDetailController.h"
 #import "UIView+Coordinate.h"
 #import "TBDirctoryController.h"
+#import "TestLayerController.h"
+
 @interface TPerformanceDetailController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -21,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@"沙盒路径",@"网络请求",@"",@"列表渲染"];
+    self.dataArray = @[@"沙盒路径",@"App 详细信息",@"网络请求",@"页面Layder"];
     [self buildTableView];
     
     // Do any additional setup after loading the view.
@@ -73,6 +75,8 @@
 //        ctr = [[SculptDrawImgController alloc] init];
     }else if(indexPath.row == 2){
 //        ctr = [[SculptSysController alloc] init];
+    }else if(indexPath.row == 3){
+        ctr = [[TestLayerController alloc] init];
     }
     [self.navigationController pushViewController:ctr animated:YES];
 }

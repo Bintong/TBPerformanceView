@@ -53,7 +53,7 @@
     [pathFullView addSubview:lab_path];
     self.listView.tableHeaderView = pathFullView;
 
-    UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(15, 0, SCREEN_WIDTH - 39, 300)];
+    UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(15, 0, SCREEN_WIDTH - 30, 300)];
     text.textColor = [UIColor redColor];
     text.font = [UIFont systemFontOfSize:14];
     text.editable = NO;
