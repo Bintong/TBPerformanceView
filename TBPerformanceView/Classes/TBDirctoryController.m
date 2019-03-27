@@ -12,7 +12,9 @@
 @interface TBDirctoryController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
-@property (strong, nonatomic) NSArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
+
+@property (strong, nonatomic) UITextView *footerText;
 
 @end
 
@@ -50,11 +52,13 @@
     lab_path.numberOfLines = 0;
     [pathFullView addSubview:lab_path];
     self.listView.tableHeaderView = pathFullView;
-    
-    UIView *foot = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
-    self.listView.tableFooterView = foot;
 
- 
+    UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(15, 0, SCREEN_WIDTH - 39, 300)];
+    text.textColor = [UIColor redColor];
+    text.font = [UIFont systemFontOfSize:14];
+    text.editable = NO;
+    _footerText = text;
+    self.listView.tableFooterView = text;
 }
 
 - (void)buildViewContent {
@@ -66,14 +70,22 @@
     TBDirctoryModel *info_d = [[TBDirctoryModel alloc] init];
     info_d.name = @"Documents";
     info_d.mb = [TBFileManager sizeAtPath: [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject]];
-    
+    info_d.subfiles = [TBFileManager subContentFiles:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject]];
+    info_d.subString = [TBFileManager makeDetailFilesInfo:[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject]];
+ 
     TBDirctoryModel *info_l = [[TBDirctoryModel alloc] init];
     info_l.name = @"Library";
     info_l.mb = [TBFileManager sizeAtPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) lastObject]];
+    info_l.subfiles = [TBFileManager subContentFiles:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) lastObject]];
+    info_l.subString = [TBFileManager makeDetailFilesInfo:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) lastObject]];
+    
     
     TBDirctoryModel *info_t = [[TBDirctoryModel alloc] init];
     info_t.name = @"tmp";
     info_t.mb = [TBFileManager sizeAtPath:NSTemporaryDirectory()];
+    info_t.subfiles = [TBFileManager subContentFiles:NSTemporaryDirectory()];
+    info_t.subString = [TBFileManager makeDetailFilesInfo:NSTemporaryDirectory()];
+    
     //SystemData less
     self.dataArray = @[info_d,info_l,info_t];
 
@@ -147,16 +159,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UIViewController *ctr ;
-    if (indexPath.row == 0) {
-//        ctr = [[TBDirctoryController alloc] init];
-    }else if(indexPath.row == 1){
-        //        ctr = [[SculptDrawImgController alloc] init];
-    }else if(indexPath.row == 2){
-        //        ctr = [[SculptSysController alloc] init];
-    }
-//    [self.navigationController pushViewController:ctr animated:YES];
-}
+
+    TBDirctoryModel *m = [self.dataArray objectAtIndex:indexPath.row];
+    
+    self.footerText.text = m.subString;
+ }
 
 /*
 #pragma mark - Navigation

@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy,nonatomic)NSString *mb;
 @property (strong,nonatomic) NSArray *subfiles;
 
+@property (copy,nonatomic)NSString *subString;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

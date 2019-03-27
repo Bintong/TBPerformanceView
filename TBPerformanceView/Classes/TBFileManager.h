@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TBFileManager : NSObject
 
 + (NSString *)sizeAtPath:(NSString *)path;
++ (NSArray *)subContentFiles:(NSString *)path;
++ (NSString *)makeDetailFilesInfo:(NSString *)path;
 
 @end
 

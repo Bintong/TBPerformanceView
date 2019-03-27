@@ -46,11 +46,32 @@
     if (isDir) {
         NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath:path];
         NSArray *a = [enumerator valueForKey:@"contents"];
-        if ([LMChenc]) {
-            <#statements#>
+        if ([LMCheckObject checkArrayValid:a]) {
+            return a;
+        }else {
+            return @[];
         }
-        return
     }
+}
+
++ (NSString *)makeDetailFilesInfo:(NSString *)path {
+    NSFileManager *fm = [NSFileManager defaultManager];
+    BOOL isDir = YES;
+    if (![fm fileExistsAtPath:path isDirectory:&isDir]) {
+        return 0;
+    };
+    unsigned long long fileSize = 0;
+    NSMutableString *fullString = [[NSMutableString alloc] initWithString:@"All Data at this path \n"];
+
+    if (isDir) {
+        NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath:path];
+        while (enumerator.nextObject) {
+            [fullString appendFormat: [NSString stringWithFormat:@"%@--%@ \n",enumerator.nextObject, [TBFileManager fileSizeStringConversionWithNumber:enumerator.fileAttributes.fileSize]]];
+        }
+        NSLog(@"%@" ,fullString);
+        
+    }
+    return fullString;
 }
 
 + (NSString *)sizeAtPath:(NSString *)path {
