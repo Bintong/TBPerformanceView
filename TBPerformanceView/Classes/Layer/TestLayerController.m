@@ -6,7 +6,7 @@
 //
 
 #import "TestLayerController.h"
-
+#import "TestCusView.h"
 @interface TestLayerController ()
 
 @end
@@ -29,15 +29,72 @@
     
     UIView *b = [[UIView alloc] initWithFrame:CGRectMake(200, 200, 50, 50)];
     b.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:a];
+    [self.view addSubview:b];
     
-    UIView *c = [[UIView alloc] initWithFrame:CGRectMake(140, 200, 60, 60)];
+    UIView *c = [[UIView alloc] initWithFrame:CGRectMake(140, 200, 260, 260)];
     c.backgroundColor = [UIColor orangeColor];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, 50, 50);
+    button.backgroundColor = [UIColor blackColor];
+    
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 5, 6)];
+    img.backgroundColor = [UIColor redColor];
+    [button addSubview:img];
+    [c addSubview:button];
+    TestCusView *cus = [[TestCusView alloc] initWithFrame:CGRectMake(0, 50, 50, 50)];
+    cus.backgroundColor = [UIColor purpleColor];
+    [c addSubview:cus];
     [self.view addSubview:c];
     
     UIView *d = [[UIView alloc] initWithFrame:CGRectMake(200, 140, 50, 50)];
     d.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:d];
+    
+    
+    [self listSubviewsOfView:self.view];
+}
+
+- (void)getLayersInView:(UIView *)v {
+    
+}
+
+- (void)listBrotherViewsOfView:(UIView *)view {
+    UIView *s_v = [view superview];
+    if (!s_v) {
+        return;
+    }
+    //s_v.subviews//涉及到查找
+    for (UIView *v in s_v.subviews) {
+        NSLog(@"brother view  is %@",v );
+    }
+}
+
+- (void)listSupViewsOfTopView:(UIView *)view {
+    UIView *s_v = [view superview];
+    if (!s_v) {
+        return;
+    }
+    NSLog(@"supview is %@",s_v);
+    [self listSupViewsOfTopView:s_v];
+}
+
+
+- (void)listSubviewsOfView:(UIView *)view {
+    
+    // Get the subviews of the view
+    NSArray *subviews = [view subviews];
+    
+    // Return if there are no subviews
+    if ([subviews count] == 0) return; // COUNT CHECK LINE
+    
+    for (UIView *subview in subviews) {
+        
+        // Do what you want to do with the subview
+        NSLog(@"subview is  %@", subview);
+        
+        // List the subviews of subview
+        [self listSubviewsOfView:subview];
+    }
 }
 
 /*
