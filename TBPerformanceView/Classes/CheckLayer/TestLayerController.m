@@ -7,6 +7,8 @@
 
 #import "TestLayerController.h"
 #import "TestCusView.h"
+#import "CheckLayerManager.h"
+
 @interface TestLayerController ()
 
 @end
@@ -18,11 +20,14 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     [self buildTestView];
+
+    [[CheckLayerManager shareInstance] show];
     
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)buildTestView {
+    
     UIView *a = [[UIView alloc] initWithFrame:CGRectMake(140, 140, 50, 50)];
     a.backgroundColor = [UIColor redColor];
     [self.view addSubview:a];
