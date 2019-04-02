@@ -46,10 +46,8 @@
     if (isDir) {
         NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath:path];
         NSArray *a = [enumerator valueForKey:@"contents"];
-        if ([LMCheckObject checkArrayValid:a]) {
-            return a;
-        }
-        return nil;
+        return a;
+       
     }
 }
 
