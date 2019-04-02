@@ -9,7 +9,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+@protocol CheckLayerViewDeleaget <NSObject>
+
+- (void)showDetailViewSuperViews:(NSArray *)views;
+
+
+@end
+
 @interface CheckLayerView : UIView
+
+@property(weak, nonatomic) id <CheckLayerViewDeleaget> delegate;
 
 - (void)show;
 

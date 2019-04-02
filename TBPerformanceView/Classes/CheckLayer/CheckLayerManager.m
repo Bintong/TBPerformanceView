@@ -7,6 +7,7 @@
 
 #import "CheckLayerManager.h"
 #import "CheckLayerView.h"
+#import "TBPerformanceBoard.h"
 @interface CheckLayerManager ()
 
 @property (nonatomic, strong) CheckLayerView *viewCheckView;
@@ -27,6 +28,7 @@
 - (void)show {
     if (!_viewCheckView) {
         _viewCheckView = [[CheckLayerView alloc] init];
+        _viewCheckView.delegate = [TBPerformanceBoard sharedInstance];
         _viewCheckView.hidden = YES;
         UIWindow *delegateWindow = [[UIApplication sharedApplication].delegate window];
         [delegateWindow addSubview:_viewCheckView];
