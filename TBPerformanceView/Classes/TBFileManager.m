@@ -47,8 +47,8 @@
         NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath:path];
         NSArray *a = [enumerator valueForKey:@"contents"];
         return a;
-       
     }
+    return @[];
 }
 
 + (NSString *)makeDetailFilesInfo:(NSString *)path {
