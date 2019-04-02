@@ -48,9 +48,8 @@
         NSArray *a = [enumerator valueForKey:@"contents"];
         if ([LMCheckObject checkArrayValid:a]) {
             return a;
-        }else {
-            return @[];
         }
+        return nil;
     }
 }
 
