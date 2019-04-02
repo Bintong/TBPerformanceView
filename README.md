@@ -7,6 +7,7 @@
 ## Demo
 
 ![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/Mar-21-2019%2013-40-57.gif)
+![DEMO](https://github.com/Bintong/TBPerformanceView/blob/dev/Apr-02-2019%2014-16-56.gif)
 
 ## Use
 
