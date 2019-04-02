@@ -46,12 +46,9 @@
     if (isDir) {
         NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath:path];
         NSArray *a = [enumerator valueForKey:@"contents"];
-        if ([LMCheckObject checkArrayValid:a]) {
-            return a;
-        }else {
-            return @[];
-        }
+        return a;
     }
+    return @[];
 }
 
 + (NSString *)makeDetailFilesInfo:(NSString *)path {
