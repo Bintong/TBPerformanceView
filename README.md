@@ -58,6 +58,7 @@ TBPerformanceView is available under the MIT license. See the LICENSE file for m
 | :---------------------------------------------------------- | ------------------------------------------- |
 | - (**void**)createPeroformanceBoardUpOnView:(UIView *)view  | 在当前view 上添加普通版本的board            |
 | - (**void**)createPeroformanceWithDeviceInfo:(UIView *)view | 在当前view 上添加普通版本的版本号版本的view |
+| - (**void**)createClickPeroformanceWithDeviceInfo:(UIViewController *)ctr | 当前view 跳转 更多检测信息功能页面 |
 | - (**void**)open;                                           | 开始监听                                    |
 | - (**void**)close;                                          | 关闭监听                                    |
 
