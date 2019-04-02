@@ -9,7 +9,7 @@
 #import "UIView+Coordinate.h"
 #import "TBDirctoryController.h"
 #import "TestLayerController.h"
-
+#import "TBPerformanceBoard.h"
 @interface TPerformanceDetailController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -22,11 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [TBPerformanceBoard sharedInstance].showedDetails = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     self.dataArray = @[@"沙盒路径",@"App 详细信息",@"网络请求",@"页面Layder"];
     [self buildTableView];
     
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [TBPerformanceBoard sharedInstance].showedDetails = NO;
 }
 
 - (void)buildTableView {

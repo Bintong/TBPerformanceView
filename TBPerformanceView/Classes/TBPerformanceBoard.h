@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol TBPerformanceBoardDelegagte <NSObject>
+
+
+
+@end
+
 @interface TBPerformanceBoard : NSObject
+
+@property (assign, nonatomic) BOOL showedDetails;
 
 + (TBPerformanceBoard *)sharedInstance;
 

@@ -12,6 +12,7 @@
 #import "TBMemeryUse.h"
 #import "TBDeviceInfo.h"
 #import "TPerformanceDetailController.h"
+#import "CheckLayerView.h"
 //#import "TBNetReachability.h"
 //#import "AppDelegate.h"
 
@@ -19,23 +20,60 @@
 typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     PB_Normarl = 0,                         // no button type
     PB_DeviceInfo,
-    PB_Detail
+    PB_Detail,
+    
 };
 
-@interface TBPerformanceBoard()
+@interface TBPerformanceBoard()<CheckLayerViewDeleaget>
 
 @property (strong ,nonatomic) CADisplayLink *displayLink;
 @property (strong ,nonatomic) UIView *boardView;
+@property (strong ,nonatomic) UITextView *detailBoardView;
 @property (strong ,nonatomic) UILabel *topLabel;
 @property (strong ,nonatomic) UIViewController *rootViewController;
 @property (assign, nonatomic) NSTimeInterval lastTime;
 @property (assign, nonatomic) NSUInteger count;
 @property (assign, nonatomic) PerformanceBoardType type;
 
+
 @end
 
 
 @implementation TBPerformanceBoard
+
+#pragma mark CheckLayerViewDelegate
+- (void)showDetailViewSuperViews:(NSArray *)views {
+    
+    if (_boardView.height < 300) {
+
+      
+        UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(15, _topLabel.height + 4, SCREEN_WIDTH - 30, 300)];
+        text.textColor = [UIColor redColor];
+        text.font = [UIFont systemFontOfSize:14];
+        text.editable = NO;
+        text.backgroundColor = [UIColor clearColor];
+        _detailBoardView = text;
+        _boardView.height += 330;
+        UIButton *closeBt = [UIButton buttonWithType:UIButtonTypeCustom];
+        closeBt.frame = CGRectMake(0, text.bottom, SCREEN_WIDTH - 30, 30);
+        [closeBt setTitle:@"关闭" forState:UIControlStateNormal];
+        [closeBt setTintColor:[UIColor whiteColor]];
+        [closeBt addTarget:self action:@selector(closeDetailView:) forControlEvents:UIControlEventTouchUpInside];
+        [_boardView addSubview:text];
+        [_boardView addSubview:closeBt];
+ 
+    }else {
+        _detailBoardView.hidden = NO;
+    }
+    _detailBoardView.text = [[views valueForKey:@"description"] componentsJoinedByString:@"👻 \n 🍎🍎🍎🍎 \n"];
+    
+}
+
+- (void)closeDetailView:(UIButton *)button {
+    _detailBoardView.hidden = YES;
+    _boardView.height -= 330;
+}
+
 
 - (void)dealloc {
     [_displayLink setPaused:YES];
@@ -105,9 +143,13 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 
 
 - (void)pushToDetail {
-    TPerformanceDetailController *c = [[TPerformanceDetailController alloc] init];
-//    UINavigationController *v = [[UINavigationController alloc] initWithRootViewController:self]
-    [self.rootViewController.navigationController pushViewController:c animated:YES];
+    if (!_showedDetails) {
+        TPerformanceDetailController *c = [[TPerformanceDetailController alloc] init];
+        
+        //    UINavigationController *v = [[UINavigationController alloc] initWithRootViewController:self]
+        [self.rootViewController.navigationController pushViewController:c animated:YES];
+        self.showedDetails = YES;
+    }
 }
 
 - (void)createShowView:(UIView *)view{
@@ -140,7 +182,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     
         if(timePassed >= 1.f) {
             CGFloat fps = _count/timePassed;
-            NSLog(@"----fps:%.1f, timePassed:%f\n", fps, timePassed);
+//            NSLog(@"----fps:%.1f, timePassed:%f\n", fps, timePassed);
     
             [self takeReadingsFromFps:fps];
             //reset

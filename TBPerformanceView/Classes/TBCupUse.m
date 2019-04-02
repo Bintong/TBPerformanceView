@@ -30,7 +30,7 @@
 - (float)cpuUse{
     float u =  cpu_usage();
     _lastCpuUse = u;
-    NSLog(@"cpu use is %0.2f",u);
+//    NSLog(@"cpu use is %0.2f",u);
     return u;
 }
 
