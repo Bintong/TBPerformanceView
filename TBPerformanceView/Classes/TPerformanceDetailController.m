@@ -10,6 +10,7 @@
 #import "TBDirctoryController.h"
 #import "TestLayerController.h"
 #import "TBPerformanceBoard.h"
+#import "TBNetDetailController.h"
 @interface TPerformanceDetailController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -79,21 +80,13 @@
     }else if(indexPath.row == 1){
 //        ctr = [[SculptDrawImgController alloc] init];
     }else if(indexPath.row == 2){
-//        ctr = [[SculptSysController alloc] init];
+        ctr = [[TBNetDetailController alloc] init];
     }else if(indexPath.row == 3){
         ctr = [[TestLayerController alloc] init];
     }
     [self.navigationController pushViewController:ctr animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ 
 
 @end
