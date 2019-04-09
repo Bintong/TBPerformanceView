@@ -6,6 +6,8 @@
 //
 
 #import "TBNetUrlProtocol.h"
+#import <objc/runtime.h>
+
 static NSString *const TBHTTP = @"TBHTTP";
 
 @interface TBNetUrlProtocol() <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
@@ -24,11 +26,11 @@ static NSString *const TBHTTP = @"TBHTTP";
 //}
 
 + (BOOL)canInitWithRequest:(NSURLRequest *)request {
-    NSLog(@"TBNetUrlProtocol ==== %@",request.URL.absoluteString);
     if ([NSURLProtocol propertyForKey:TBHTTP inRequest:request]) {
         return NO;
     }
     if ([request.URL.scheme isEqualToString:@"http"] || [request.URL.scheme isEqualToString:@"https"]) {
+        NSLog(@"TBNetUrlProtocol ==== %@",request.URL.absoluteString);
         return YES;
     }
     return NO;
@@ -73,9 +75,28 @@ static NSString *const TBHTTP = @"TBHTTP";
 }
 
 
+
+
 - (void)stopLoading{
     [self.connection cancel];
 }
 
+
+
+#warning inject
++ (void)injectNSURLSessionConfiguration{
+    Class cls = NSClassFromString(@"__NSCFURLSessionConfiguration") ?: NSClassFromString(@"NSURLSessionConfiguration");
+    Method originalMethod = class_getInstanceMethod(cls, @selector(protocolClasses));
+    Method stubMethod = class_getInstanceMethod([self class], @selector(protocolClasses));
+    if (!originalMethod || !stubMethod) {
+        [NSException raise:NSInternalInconsistencyException format:@"Couldn't load NEURLSessionConfiguration."];
+    }
+    method_exchangeImplementations(originalMethod, stubMethod);
+}
+
+
+- (NSArray *)protocolClasses {
+    return @[[TBNetUrlProtocol class]];
+}
 
 @end
