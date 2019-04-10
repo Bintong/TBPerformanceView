@@ -83,7 +83,7 @@ static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 //        [_info_delegate callbackSendNetWorkData:_tb_request.allHTTPHeaderFields request:_tb_request respones:_tb_response];
 //
 //    }
-    [[TBNetMonitorManager sharedInstance] handleRequest:self.tb_request response:self.tb_response];
+    [[TBNetMonitorManager sharedInstance] handleRequest:self.tb_request response:self.tb_response andData:_tb_data];
     
 }
 
@@ -91,14 +91,10 @@ static id<TBNetworkLoggerInfoDelegate> _info_delegate;
     [self.client URLProtocol:self didFailWithError:error];
 }
 
-
-
-
 - (void)stopLoading{
     [self.connection cancel];
 }
-
-
+ 
 
 #warning inject
 + (void)injectNSURLSessionConfiguration{

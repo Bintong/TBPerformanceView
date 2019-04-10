@@ -7,20 +7,24 @@
 
 #import "TBNetMonitorManager.h"
 #import "TBnetMonitorModel.h"
+#import "TBNetMonitorUtil.h"
 @interface TBNetMonitorManager()
-
-
-
 
 @end
 
 @implementation TBNetMonitorManager
-- (void)handleRequest:(NSURLRequest *)request response:(NSURLResponse *)respones {
+- (void)handleRequest:(NSURLRequest *)request response:(NSURLResponse *)respones andData:(NSData *)data {
     NSDate *currentDate = [NSDate date];
     NSTimeInterval inter = [[NSTimeZone systemTimeZone] secondsFromGMT];
     NSDate *bjDate = [currentDate dateByAddingTimeInterval:inter];
  
-    NSString *requestURL = [NSString stringWithFormat:@"%@ \n  %@ - %@",request.URL.absoluteString,request.HTTPMethod,bjDate];
+    int64_t up = [TBNetMonitorUtil getRequestLength:request];
+    int64_t down = [TBNetMonitorUtil getResponseLength:respones data:data]
+    
+    
+    NSString *lengthString = [NSString stringWithFormat:@"%zi %lli", tbper];
+    
+    NSString *requestURL = [NSString stringWithFormat:@"%@ \n  %@ - %@ \n %@",request.URL.absoluteString,request.HTTPMethod,bjDate,lengthString];
     
     TBnetMonitorModel *model = [[TBnetMonitorModel alloc] init];
     model.monitorRequest = request;
