@@ -9,7 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol TBNetworkLoggerInfoDelegate <NSObject>
+
+- (void)callbackSendNetWorkData:(NSDictionary *)parameter request:(NSURLRequest *)request respones:(NSURLResponse *)response;
+
+
+@end
+
 @interface TBNetUrlProtocol : NSURLProtocol
+
+@property (class,nonatomic, weak) id<TBNetworkLoggerInfoDelegate> info_delegate;
 
 + (void)injectNSURLSessionConfiguration;
 

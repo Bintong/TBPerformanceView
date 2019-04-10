@@ -7,8 +7,9 @@
 
 #import "TBNetUrlProtocol.h"
 #import <objc/runtime.h>
-
+#import "TBNetMonitorManager.h"
 static NSString *const TBHTTP = @"TBHTTP";
+static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 
 @interface TBNetUrlProtocol() <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
@@ -17,10 +18,19 @@ static NSString *const TBHTTP = @"TBHTTP";
 @property (strong, nonatomic) NSURLResponse *tb_response;
 @property (strong, nonatomic) NSMutableData *tb_data;
 
+
+
 @end
 
 @implementation TBNetUrlProtocol
 
++ (id<TBNetworkLoggerInfoDelegate>)info_delegate {
+    return _info_delegate;
+}
+
++ (void)setInfo_delegate:(id<TBNetworkLoggerInfoDelegate>)info_delegate{
+    _info_delegate = info_delegate;
+}
 //+ (BOOL)canInitWithTask:(NSURLSessionTask *)task {
 //
 //}
@@ -68,6 +78,13 @@ static NSString *const TBHTTP = @"TBHTTP";
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection {
     [self.client URLProtocolDidFinishLoading:self];
+    
+//    if ([_info_delegate respondsToSelector:@selector(callbackSendNetWorkData:request:respones:)]) {
+//        [_info_delegate callbackSendNetWorkData:_tb_request.allHTTPHeaderFields request:_tb_request respones:_tb_response];
+//
+//    }
+    [[TBNetMonitorManager sharedInstance] handleRequest:self.tb_request response:self.tb_response];
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -93,7 +110,6 @@ static NSString *const TBHTTP = @"TBHTTP";
     }
     method_exchangeImplementations(originalMethod, stubMethod);
 }
-
 
 - (NSArray *)protocolClasses {
     return @[[TBNetUrlProtocol class]];
