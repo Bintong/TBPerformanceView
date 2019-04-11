@@ -11,6 +11,8 @@
 #import "TestLayerController.h"
 #import "TBPerformanceBoard.h"
 #import "TBNetDetailController.h"
+
+
 @interface TPerformanceDetailController()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -48,6 +50,10 @@
     self.listView.delegate = self;
     self.listView.dataSource = self;
     [self.view addSubview:self.listView];
+    
+    
+    //header
+    
 }
 
 

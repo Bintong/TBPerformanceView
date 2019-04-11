@@ -13,6 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSURLResponse *monitorResponse;
 @property (strong, nonatomic) NSURLRequest *monitorRequest;
+@property (strong, nonatomic) NSData *monitorResponseData;
+
+@property (assign, nonatomic) NSInteger upFlow;
+@property (assign, nonatomic) NSInteger dowmFlow;
+
 @property (copy,nonatomic)NSString *detailString;
 
 @end

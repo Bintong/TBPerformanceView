@@ -19,10 +19,11 @@
     NSDate *bjDate = [currentDate dateByAddingTimeInterval:inter];
  
     int64_t up = [TBNetMonitorUtil getRequestLength:request];
-    int64_t down = [TBNetMonitorUtil getResponseLength:respones data:data]
+    int64_t down = [TBNetMonitorUtil getResponseLength:respones data:data];
     
+    [TBPerformanceUtils formatByte:up];
     
-    NSString *lengthString = [NSString stringWithFormat:@"%zi %lli", tbper];
+    NSString *lengthString = [NSString stringWithFormat:@"↑%@ | ↓%@",[TBPerformanceUtils formatByte:up],[TBPerformanceUtils formatByte:down]];
     
     NSString *requestURL = [NSString stringWithFormat:@"%@ \n  %@ - %@ \n %@",request.URL.absoluteString,request.HTTPMethod,bjDate,lengthString];
     
@@ -30,7 +31,9 @@
     model.monitorRequest = request;
     model.monitorResponse = respones;
     model.detailString = requestURL;
-    
+    model.monitorResponseData = data;
+    model.upFlow = up;
+    model.dowmFlow = down;
     [[TBNetMonitorManager sharedInstance].logArray addObject:model];
 }
 

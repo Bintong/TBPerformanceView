@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSUInteger)getRequestLength:(NSURLRequest *)request;
 
+
++ (NSString *)convertJsonFromData:(NSData *)data;
 @end
 
 NS_ASSUME_NONNULL_END

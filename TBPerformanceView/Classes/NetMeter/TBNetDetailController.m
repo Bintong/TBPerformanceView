@@ -10,6 +10,9 @@
 #import "TBNetUrlProtocol.h"
 #import "TBNetMonitorManager.h"
 #import "TBnetMonitorModel.h"
+#import "TBNetMonitorDetailController.h"
+#import "TBNetSummaryInfoView.h"
+
 @interface TBNetDetailController ()<UITableViewDelegate,UITableViewDataSource,TBNetworkLoggerInfoDelegate>
 @property (strong, nonatomic) UITableView *listView;
 @property (strong, nonatomic) NSMutableArray  *dataArray;
@@ -22,26 +25,13 @@
     
     [NSURLProtocol registerClass:[TBNetUrlProtocol class]];
     [TBNetUrlProtocol setInfo_delegate:self];
-    
-    
-//    [[TBPerformanceBoard sharedInstance] close];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = [NSMutableArray arrayWithObjects:@"总流量",@"请求次数",@"request 流量",@"response 流量",@"错误次数", nil];
+    self.dataArray = [NSMutableArray array];
+    
+    //改成header
+    
     [self.dataArray addObjectsFromArray:[TBNetMonitorManager sharedInstance].logArray];
-    
-//    NSArray *segmentedArray = [NSArray arrayWithObjects:@"概况",@"列表",nil];
-//    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc]initWithItems:segmentedArray];
-//    segmentedControl.frame = CGRectMake(0, 0, 180, 30);
-//    segmentedControl.selectedSegmentIndex = 0;
-//    segmentedControl.tintColor = [UIColor redColor];
-//    [segmentedControl addTarget:self action:@selector(indexDidChangeForSegmentedControl:) forControlEvents:UIControlEventValueChanged];
-//
-//    [self.navigationItem setTitleView:segmentedControl];
-    
-//    [self beginRegister];
-    
     [self buildTableView];
-    
 }
 
 - (void)buildTableView {
@@ -57,6 +47,13 @@
     self.listView.delegate = self;
     self.listView.dataSource = self;
     [self.view addSubview:self.listView];
+    
+    
+    //header view
+    TBNetSummaryInfoView *infoView = [[TBNetSummaryInfoView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
+    [infoView refreshSummerInfoView:[TBNetMonitorManager sharedInstance].logArray];
+    self.listView.tableHeaderView = infoView;
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -77,22 +74,20 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
-    if (indexPath.row > 4) {
-        TBnetMonitorModel *m  = [self.dataArray objectAtIndex:indexPath.row];
-        cell.textLabel.text = m.detailString;
-    }else {
-        cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
-    }
+  
+    TBnetMonitorModel *m  = [self.dataArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = m.detailString;
+    
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.font = [UIFont systemFontOfSize:12];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    TBNetMonitorDetailController *ctr = [[TBNetMonitorDetailController alloc] init];
+    ctr.detailModel = [self.dataArray objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:ctr animated:YES];
 }
-
-
 
 - (void)indexDidChangeForSegmentedControl:(UISegmentedControl *)seg {
 

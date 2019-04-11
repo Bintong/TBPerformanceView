@@ -62,6 +62,7 @@ static id<TBNetworkLoggerInfoDelegate> _info_delegate;
     NSURLRequest *request = [[self class] canonicalRequestForRequest:self.request];
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
     self.tb_request = request;
+    self.tb_data = [NSMutableData data];
 }
 
 #pragma mark - NSURLConnectionDataDelegate
