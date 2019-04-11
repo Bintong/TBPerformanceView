@@ -57,6 +57,7 @@
     header_f.text = [TBNetMonitorUtil convertJsonFromData:_detailModel.monitorResponseData];
     self.listView.tableFooterView = header_f;
     
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
