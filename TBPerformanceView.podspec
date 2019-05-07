@@ -32,9 +32,10 @@ A collection of tools for iOS device performance persistence to detect and evalu
 
   s.source_files = 'TBPerformanceView/Classes/**/*'
   s.prefix_header_file = 'TBPerformanceView/Classes/PrefixHeader.pch'
-  # s.resource_bundles = {
-  #   'TBPerformanceView' => ['TBPerformanceView/Assets/*.png']
-  # }
+  s.resource     = 'TBPerformanceView/TBPerformanceView.bundle'
+#  s.resource_bundles = {
+#     'TBPerformanceView' => ['TBPerformanceView/Assets/']
+#  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'MapKit'

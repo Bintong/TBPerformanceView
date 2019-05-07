@@ -8,6 +8,9 @@
 #import "TBNetUrlProtocol.h"
 #import <objc/runtime.h>
 #import "TBNetMonitorManager.h"
+
+#import "TBDeviceInfo.h"
+#import "TBSSLCredential.h"
 static NSString *const TBHTTP = @"TBHTTP";
 static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 
@@ -67,6 +70,64 @@ static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 
 #pragma mark - NSURLConnectionDataDelegate
 
+//- (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+//    // 判断是否是信任服务器证书
+//    if(challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
+//        // 告诉服务器，客户端信任证书
+//        // 创建凭据对象
+//        NSURLCredential *credntial = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+//        // 告诉服务器信任证书
+//        [challenge.sender useCredential:credntial forAuthenticationChallenge:challenge];
+//    }
+//}
+
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+    
+    return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+//
+//    NSBundle *bundle = [NSBundle bundleForClass:[TBDeviceInfo class]];
+//    NSURL *bundleURL = [bundle URLForResource:@"TBPerformanceView" withExtension:@"bundle"];
+//    NSString *certPath = [[NSBundle bundleWithURL:bundleURL] pathForResource:@"xiaozhu" ofType:@"cer"];
+//
+
+    NSURLCredential *ce = [TBSSLCredential defaultXZSSLCredential];
+    [[challenge sender] useCredential:ce forAuthenticationChallenge:challenge];
+    
+    return;
+    // 提取二进制内容
+    NSData *derCA = [TBSSLCredential defaultXZSSLCredential];//NSData dataWithContentsOfFile:certPath];
+    
+    // 根据二进制内容提取证书信息
+    SecCertificateRef caRef = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)derCA);
+    // 形成钥匙链
+    NSArray * chain = [NSArray arrayWithObject:(__bridge id)(caRef)];
+    
+    CFArrayRef caChainArrayRef = CFBridgingRetain(chain);
+    
+    // 取出服务器证书
+    SecTrustRef trust = [[challenge protectionSpace] serverTrust];
+    
+    SecTrustResultType trustResult = 0;
+    // 设置为我们自有的CA证书钥匙连
+    int err = SecTrustSetAnchorCertificates(trust, caChainArrayRef);
+    if (err == noErr) {
+        // 用CA证书验证服务器证书
+        err = SecTrustEvaluate(trust, &trustResult);
+    }
+    CFRelease(trust);
+    // 检查结果
+    BOOL trusted = (err == noErr) && ((trustResult == kSecTrustResultProceed)||(trustResult == kSecTrustResultConfirm) || (trustResult == kSecTrustResultUnspecified));
+    if (trusted) {
+        [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+    } else {
+        [challenge.sender cancelAuthenticationChallenge:challenge];
+    }
+    
+}
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     [[self client] URLProtocol:self didReceiveResponse:response cacheStoragePolicy:NSURLCacheStorageAllowed];
     self.tb_response = response;
@@ -79,11 +140,7 @@ static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection {
     [self.client URLProtocolDidFinishLoading:self];
-    
-//    if ([_info_delegate respondsToSelector:@selector(callbackSendNetWorkData:request:respones:)]) {
-//        [_info_delegate callbackSendNetWorkData:_tb_request.allHTTPHeaderFields request:_tb_request respones:_tb_response];
-//
-//    }
+ 
     [[TBNetMonitorManager sharedInstance] handleRequest:self.tb_request response:self.tb_response andData:_tb_data];
     
 }
