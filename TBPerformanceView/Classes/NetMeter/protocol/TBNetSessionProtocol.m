@@ -7,7 +7,6 @@
 
 #import "TBNetSessionProtocol.h"
 #import <objc/runtime.h>
-#import "TBSSLCredential.h"
 static NSString * const HJHTTPHandledIdentifier = @"hujiang_http_handled";
 
 
@@ -98,8 +97,7 @@ static NSString * const HJHTTPHandledIdentifier = @"hujiang_http_handled";
     //判断服务器返回的证书类型, 是否是服务器信任
     if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
         //强制信任
-        NSURLCredential *card = [TBSSLCredential defaultXZSSLCredential];//[[NSURLCredential alloc]initWithTrust:challenge.protectionSpace.serverTrust];
-        completionHandler(NSURLSessionAuthChallengeUseCredential, card);
+        [[NSURLCredential alloc]initWithTrust:challenge.protectionSpace.serverTrust];
     }
 }
 

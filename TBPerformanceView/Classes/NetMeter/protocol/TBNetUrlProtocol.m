@@ -10,7 +10,6 @@
 #import "TBNetMonitorManager.h"
 
 #import "TBDeviceInfo.h"
-#import "TBSSLCredential.h"
 static NSString *const TBHTTP = @"TBHTTP";
 static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 
@@ -88,17 +87,14 @@ static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
 //
-//    NSBundle *bundle = [NSBundle bundleForClass:[TBDeviceInfo class]];
-//    NSURL *bundleURL = [bundle URLForResource:@"TBPerformanceView" withExtension:@"bundle"];
-//    NSString *certPath = [[NSBundle bundleWithURL:bundleURL] pathForResource:@"xiaozhu" ofType:@"cer"];
-//
+    NSBundle *bundle = [NSBundle bundleForClass:[TBDeviceInfo class]];
+    NSURL *bundleURL = [bundle URLForResource:@"TBPerformanceView" withExtension:@"bundle"];
+    NSString *certPath = [[NSBundle bundleWithURL:bundleURL] pathForResource:@"xiaozhu" ofType:@"cer"];
 
-    NSURLCredential *ce = [TBSSLCredential defaultXZSSLCredential];
-    [[challenge sender] useCredential:ce forAuthenticationChallenge:challenge];
+
     
-    return;
     // 提取二进制内容
-    NSData *derCA = [TBSSLCredential defaultXZSSLCredential];//NSData dataWithContentsOfFile:certPath];
+    NSData *derCA = [NSData dataWithContentsOfFile:certPath];
     
     // 根据二进制内容提取证书信息
     SecCertificateRef caRef = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)derCA);
