@@ -11,6 +11,7 @@
 
 
 + (NSUInteger)getRequestLength:(NSURLRequest *)request{
+ 
     NSDictionary<NSString *, NSString *> *headerFields = request.allHTTPHeaderFields;
     NSDictionary<NSString *, NSString *> *cookiesHeader = [self getCookies:request];
     if (cookiesHeader.count) {
@@ -26,6 +27,7 @@
 }
 
 + (NSUInteger)getHeadersLength:(NSDictionary *)headers {
+   
     NSUInteger headersLength = 0;
     if (headers) {
         NSData *data = [NSJSONSerialization dataWithJSONObject:headers
@@ -39,6 +41,9 @@
 
 
 + (NSDictionary<NSString *, NSString *> *)getCookies:(NSURLRequest *)request {
+    if (request == nil) {
+        return [NSDictionary dictionary];
+    }
     NSDictionary<NSString *, NSString *> *cookiesHeader;
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     NSArray<NSHTTPCookie *> *cookies = [cookieStorage cookiesForURL:request.URL];
@@ -74,21 +79,16 @@
 }
 
 
-+ (int64_t)getResponseLength:(NSURLResponse *)response data:(NSData *)responseData{
++ (int64_t)getResponseLength:(NSURLSessionTask *)task {
+   
     int64_t responseLength = 0;
-    if (response && [response isKindOfClass:[NSHTTPURLResponse class]]) {
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-        NSDictionary<NSString *, NSString *> *headerFields = httpResponse.allHeaderFields;
-        NSUInteger headersLength = [self getHeadersLength:headerFields];
-        
-        int64_t contentLength = 0.;
-        if(httpResponse.expectedContentLength != NSURLResponseUnknownLength){
-            contentLength = httpResponse.expectedContentLength;
-        }else{
-            contentLength = responseData.length;
-        }
-        
-        responseLength = headersLength + contentLength;
+    
+    if (task.response) {
+        int64_t contentLength = task.countOfBytesReceived;//sizeof();//task.countOfBytesReceived;
+        responseLength = contentLength; //缺少 header
+        if ([task.response.URL.absoluteString containsString:@"b7462b7a"]) {
+            NSLog(@"responseLength is %f",responseLength);
+        };
     }
     return responseLength;
 }

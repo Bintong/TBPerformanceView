@@ -137,7 +137,7 @@ static id<TBNetworkLoggerInfoDelegate> _info_delegate;
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection {
     [self.client URLProtocolDidFinishLoading:self];
  
-    [[TBNetMonitorManager sharedInstance] handleRequest:self.tb_request response:self.tb_response andData:_tb_data];
+    [[TBNetMonitorManager sharedInstance] handleRequest:self.tb_request task:nil andData:nil];
     
 }
 

@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TBNetMonitorUtil : NSObject
 
-+ (int64_t)getResponseLength:(NSURLResponse *)response data:(NSData *)responseData;
++ (int64_t)getResponseLength:(NSURLSessionTask *)task;
 
 + (NSUInteger)getRequestLength:(NSURLRequest *)request;
 

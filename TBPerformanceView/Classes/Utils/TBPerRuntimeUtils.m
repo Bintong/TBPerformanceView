@@ -46,8 +46,10 @@
         class_addMethod(cls, swizzledSelector, implementation, methodDescription.types);
         Method newMethod = class_getInstanceMethod(cls, swizzledSelector);
         method_exchangeImplementations(oldMethod, newMethod);
+        NSLog(@"exchangeImplementtations is %s-%s |||| class name is %s ",method_getName(oldMethod),method_getName(newMethod),class_getName(cls));
     } else {
         class_addMethod(cls, selector, implementation, methodDescription.types);
+        NSLog(@"class_addMethod is %s |||| class name is %s",method_getName(oldMethod),class_getName(cls));
     };
 }
 
@@ -59,7 +61,11 @@
         BOOL implementsSelector = NO;
         for (int index = 0; index < numMethods; index++) {
             SEL methodSelector = method_getName(methods[index]);
-            if (selecotr == methodSelector) {implementsSelector = YES; break;};
+            if (selecotr == methodSelector) {
+                implementsSelector = YES;
+                break;
+                
+            }
         }
         
         free(methods);

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (TBNetMonitorManager *)sharedInstance;
 
-- (void)handleRequest:(NSURLRequest *)request response:(NSURLResponse *)respones andData:(NSData *)data;
+- (void)handleRequest:(NSURLRequest *)request task:(NSURLSessionTask *)task andData:(NSData *)data;
 
 @end
 

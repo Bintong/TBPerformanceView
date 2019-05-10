@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TBPerRuntimeUtils : NSObject
 
 + (SEL)swizzledSelectorForSelector:(SEL)selector;
+
++ (BOOL)instanceRespondsButDoseNotImplementSeletor:(SEL)selecotr class:(Class)cls;
+
 + (void)replaceImplementationOfSelector:(SEL)selector
                            withSelector:(SEL)swizzledSelector
                                forClass:(Class)cls

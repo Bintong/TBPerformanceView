@@ -13,28 +13,36 @@
 @end
 
 @implementation TBNetMonitorManager
-- (void)handleRequest:(NSURLRequest *)request response:(NSURLResponse *)respones andData:(NSData *)data {
-    NSDate *currentDate = [NSDate date];
-    NSTimeInterval inter = [[NSTimeZone systemTimeZone] secondsFromGMT];
-    NSDate *bjDate = [currentDate dateByAddingTimeInterval:inter];
- 
-    int64_t up = [TBNetMonitorUtil getRequestLength:request];
-    int64_t down = [TBNetMonitorUtil getResponseLength:respones data:data];
+
+- (void)handleRequest:(NSURLRequest *)request task:(NSURLSessionTask *)task andData:(NSData *)data {
     
-    [TBPerformanceUtils formatByte:up];
+    if (![request.URL.absoluteString containsString:@"amazonaws"]) {
+        NSDate *currentDate = [NSDate date];
+        NSTimeInterval inter = [[NSTimeZone systemTimeZone] secondsFromGMT];
+        NSDate *bjDate = [currentDate dateByAddingTimeInterval:inter];
+        
+        int64_t up = [TBNetMonitorUtil getRequestLength:request];
+        int64_t down = [TBNetMonitorUtil getResponseLength:task];
+        
+        [TBPerformanceUtils formatByte:up];
+        
+        NSString *lengthString = [NSString stringWithFormat:@"↑%@ | ↓%@",[TBPerformanceUtils formatByte:up],[TBPerformanceUtils formatByte:down]];
+        //url
+        
+        NSString *sortUrl =  [request.URL.absoluteString substringFromIndex:request.URL.absoluteString.length - 20];
+        NSString *requestURL = [NSString stringWithFormat:@"%@ \n  %@ - %@ \n %@", sortUrl,request.HTTPMethod,bjDate,lengthString];
+        
+        TBnetMonitorModel *model = [[TBnetMonitorModel alloc] init];
+        model.monitorRequest = request;
+        model.monitorResponse = task.response;
+        model.detailString = requestURL;
+        model.monitorResponseData = [NSData dataWithData:data];
+        model.upFlow = up;
+        model.dowmFlow = down;
+        [[TBNetMonitorManager sharedInstance].logArray addObject:model];
+    }
     
-    NSString *lengthString = [NSString stringWithFormat:@"↑%@ | ↓%@",[TBPerformanceUtils formatByte:up],[TBPerformanceUtils formatByte:down]];
-    
-    NSString *requestURL = [NSString stringWithFormat:@"%@ \n  %@ - %@ \n %@",request.URL.absoluteString,request.HTTPMethod,bjDate,lengthString];
-    
-    TBnetMonitorModel *model = [[TBnetMonitorModel alloc] init];
-    model.monitorRequest = request;
-    model.monitorResponse = respones;
-    model.detailString = requestURL;
-    model.monitorResponseData = data;
-    model.upFlow = up;
-    model.dowmFlow = down;
-    [[TBNetMonitorManager sharedInstance].logArray addObject:model];
+
 }
 
 

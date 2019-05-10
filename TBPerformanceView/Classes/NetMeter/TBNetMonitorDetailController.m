@@ -44,18 +44,28 @@
     
     
     //header
-    UITextView * header_t = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
+    UITextView * header_t = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
     header_t.textColor = [UIColor blackColor];
-    header_t.font = [UIFont systemFontOfSize:14];
+    header_t.font = [UIFont systemFontOfSize:12];
     header_t.text = _detailModel.monitorRequest.URL.absoluteString;
     
     self.listView.tableHeaderView = header_t;
     //footer
-    UITextView * header_f = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 100)];
-    header_f.textColor = [UIColor blackColor];
-    header_f.font = [UIFont systemFontOfSize:12];
-    header_f.text = [TBNetMonitorUtil convertJsonFromData:_detailModel.monitorResponseData];
-    self.listView.tableFooterView = header_f;
+
+    if ([header_t.text containsString:@".jpg"]||[header_t.text containsString:@".png"]||[header_t.text containsString:@".webp"]) {
+        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageWithData:_detailModel.monitorResponseData]];
+        img.contentMode = UIViewContentModeScaleAspectFill;
+
+        self.listView.tableFooterView = img;
+    } else {
+        UITextView * header_f = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 150)];
+        header_f.textColor = [UIColor blackColor];
+        header_f.font = [UIFont systemFontOfSize:12];
+        header_f.text = [TBNetMonitorUtil convertJsonFromData:_detailModel.monitorResponseData];
+        self.listView.tableFooterView = header_f;
+
+    }
+    
     
     
 }

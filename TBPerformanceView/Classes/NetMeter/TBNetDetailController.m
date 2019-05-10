@@ -22,9 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [NSURLProtocol registerClass:[TBNetUrlProtocol class]];
-    [TBNetUrlProtocol setInfo_delegate:self];
+//
+//    [NSURLProtocol registerClass:[TBNetUrlProtocol class]];
+//    [TBNetUrlProtocol setInfo_delegate:self];
     self.view.backgroundColor = [UIColor whiteColor];
     self.dataArray = [NSMutableArray array];
     
@@ -61,7 +61,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 44;
+    return 88;
 }
 
 
@@ -74,12 +74,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
-  
     TBnetMonitorModel *m  = [self.dataArray objectAtIndex:indexPath.row];
     cell.textLabel.text = m.detailString;
     
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.font = [UIFont systemFontOfSize:12];
+    cell.textLabel.font = [UIFont systemFontOfSize:10];
     return cell;
 }
 

@@ -133,6 +133,8 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         _displayLink.paused = YES;
     }
     _type = PB_Detail;
+    if (!ctr) {}
+   
     [self createPeroformanceBoardUpOnView:ctr.view.window];
     _rootViewController = ctr;
     _type = PB_Detail;
