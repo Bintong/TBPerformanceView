@@ -42,7 +42,7 @@
     self.listView.dataSource = self;
     [self.view addSubview:self.listView];
     
-    
+
     //header
     UITextView * header_t = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
     header_t.textColor = [UIColor blackColor];
@@ -54,13 +54,14 @@
 
     if ([header_t.text containsString:@".jpg"]||[header_t.text containsString:@".png"]||[header_t.text containsString:@".webp"]) {
         UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageWithData:_detailModel.monitorResponseData]];
-        img.contentMode = UIViewContentModeScaleAspectFill;
-
+        img.contentMode = UIViewContentModeScaleAspectFit;
+        img.backgroundColor = [UIColor blackColor];
         self.listView.tableFooterView = img;
     } else {
         UITextView * header_f = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 150)];
-        header_f.textColor = [UIColor blackColor];
+        header_f.textColor = [UIColor whiteColor];
         header_f.font = [UIFont systemFontOfSize:12];
+        header_f.backgroundColor = [UIColor blackColor];
         header_f.text = [TBNetMonitorUtil convertJsonFromData:_detailModel.monitorResponseData];
         self.listView.tableFooterView = header_f;
 

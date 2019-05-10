@@ -59,7 +59,6 @@ static CGFloat const kViewCheckSize = 62;
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
     UITouch *touch = [touches anyObject];
     CGPoint point = [touch locationInView:self];
     _left = point.x;
@@ -83,8 +82,6 @@ static CGFloat const kViewCheckSize = 62;
 //    NSLog(@"info views is %@",_info_views);
 //    NSLog(@"super views is \n");
     [self printSuperViewFrom:top_view];
-   
-    
 }
 
 -(void)hitTest:(UIView*)view Point:(CGPoint) point{

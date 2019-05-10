@@ -15,7 +15,7 @@
 #import "CheckLayerView.h"
 //#import "TBNetReachability.h"
 //#import "AppDelegate.h"
-
+#import "TBBoardView.h"
 
 typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     PB_Normarl = 0,                         // no button type
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 @interface TBPerformanceBoard()<CheckLayerViewDeleaget>
 
 @property (strong ,nonatomic) CADisplayLink *displayLink;
-@property (strong ,nonatomic) UIView *boardView;
+@property (strong ,nonatomic) TBBoardView *boardView;
 @property (strong ,nonatomic) UITextView *detailBoardView;
 @property (strong ,nonatomic) UILabel *topLabel;
 @property (strong ,nonatomic) UIViewController *rootViewController;
@@ -35,6 +35,8 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 @property (assign, nonatomic) NSUInteger count;
 @property (assign, nonatomic) PerformanceBoardType type;
 
+@property (nonatomic, assign) CGFloat left;
+@property (nonatomic, assign) CGFloat top;
 
 @end
 
@@ -51,6 +53,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         text.textColor = [UIColor redColor];
         text.font = [UIFont systemFontOfSize:14];
         text.editable = NO;
+        
         text.backgroundColor = [UIColor clearColor];
         _detailBoardView = text;
         _boardView.height += 330;
@@ -60,6 +63,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         [closeBt setTintColor:[UIColor whiteColor]];
         [closeBt addTarget:self action:@selector(closeDetailView:) forControlEvents:UIControlEventTouchUpInside];
         [_boardView addSubview:text];
+       
         [_boardView addSubview:closeBt];
  
     }else {
@@ -144,6 +148,9 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 }
 
 
+
+
+
 - (void)pushToDetail {
     if (!_showedDetails) {
         TPerformanceDetailController *c = [[TPerformanceDetailController alloc] init];
@@ -155,22 +162,25 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 }
 
 - (void)createShowView:(UIView *)view{
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(1, 50, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];
-    _boardView = topView;
-    topView.backgroundColor = [UIColor blackColor];
-    topView.layer.cornerRadius = 4;
-    topView.layer.masksToBounds = YES;
-    if (view) {
-        [view addSubview:topView];
-    }else {
-        UIWindow *w = [[UIApplication sharedApplication] keyWindow];
-        [w addSubview:topView];
+    if (view && ![view viewWithTag:1001]) {
+        TBBoardView *topView = [[TBBoardView alloc] initWithFrame:CGRectMake(1, 50, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];
+        _boardView = topView;
+        topView.backgroundColor = [UIColor blackColor];
+        topView.layer.cornerRadius = 4;
+        topView.layer.masksToBounds = YES;
+        topView.tag = 1001;
+        
+        if (view) {
+            [view addSubview:topView];
+        }else {
+            UIWindow *w = [[UIApplication sharedApplication] keyWindow];
+            [w addSubview:topView];
+        }
+        UILabel *l = [self labelWithFontSize:12 FontColor:[UIColor whiteColor] frame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 100, 25) Text:@""];
+        l.textAlignment = NSTextAlignmentCenter;
+        self.topLabel = l;
+        [topView addSubview:l];
     }
-    
-    UILabel *l = [self labelWithFontSize:12 FontColor:[UIColor whiteColor] frame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 100, 25) Text:@""];
-    l.textAlignment = NSTextAlignmentCenter;
-    self.topLabel = l;
-    [topView addSubview:l];
 }
 
 - (void)displayLinkTick:(CADisplayLink *)disLink {
@@ -231,5 +241,9 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 - (void)applicationWillResignActiveNotification:(NSNotificationCenter *)notification  {
     [self.displayLink setPaused:YES];
 }
+
+
+
+
 
 @end
