@@ -29,7 +29,7 @@
         NSString *lengthString = [NSString stringWithFormat:@"↑%@ | ↓%@",[TBPerformanceUtils formatByte:up],[TBPerformanceUtils formatByte:down]];
         //url
         
-        NSString *sortUrl =  [request.URL.absoluteString substringFromIndex:request.URL.absoluteString.length - 20];
+        NSString *sortUrl =  [request.URL.absoluteString substringFromIndex:request.URL.absoluteString.length - 40];
         NSString *requestURL = [NSString stringWithFormat:@"%@ \n  %@ - %@ \n %@", sortUrl,request.HTTPMethod,bjDate,lengthString];
         
         TBnetMonitorModel *model = [[TBnetMonitorModel alloc] init];

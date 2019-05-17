@@ -56,7 +56,7 @@
 
     if ([header_t.text containsString:@".jpg"]||[header_t.text containsString:@".png"]||[header_t.text containsString:@".webp"]) {
 //        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageWithData:_detailModel.monitorResponseData]];
-        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 10, SCREEN_WIDTH, SCREEN_HEIGHT - 150)];
         
         [img sd_setImageWithURL:_detailModel.monitorRequest.URL.absoluteString];
         img.contentMode = UIViewContentModeScaleAspectFit;
@@ -71,9 +71,6 @@
         self.listView.tableFooterView = header_f;
 
     }
-    
-    
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
