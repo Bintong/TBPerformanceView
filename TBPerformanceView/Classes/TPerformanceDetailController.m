@@ -50,10 +50,7 @@
     self.listView.delegate = self;
     self.listView.dataSource = self;
     [self.view addSubview:self.listView];
-    
-    
     //header
-    
 }
 
 

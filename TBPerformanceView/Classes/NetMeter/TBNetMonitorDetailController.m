@@ -7,6 +7,8 @@
 
 #import "TBNetMonitorDetailController.h"
 #import "TBNetMonitorUtil.h"
+#import "UIImageView+WebCache.h"
+
 @interface TBNetMonitorDetailController ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) UITableView *listView;
 @property (strong, nonatomic) NSMutableArray  *dataArray;
@@ -53,7 +55,10 @@
     //footer
 
     if ([header_t.text containsString:@".jpg"]||[header_t.text containsString:@".png"]||[header_t.text containsString:@".webp"]) {
-        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageWithData:_detailModel.monitorResponseData]];
+//        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageWithData:_detailModel.monitorResponseData]];
+        UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+        
+        [img sd_setImageWithURL:_detailModel.monitorRequest.URL.absoluteString];
         img.contentMode = UIViewContentModeScaleAspectFit;
         img.backgroundColor = [UIColor blackColor];
         self.listView.tableFooterView = img;
