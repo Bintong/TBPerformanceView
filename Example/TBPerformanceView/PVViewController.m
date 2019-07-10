@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor redColor];
     [[TBPerformanceBoard sharedInstance] createPeroformanceWithDeviceInfo:self.view];
     [[TBPerformanceBoard sharedInstance] open];
 	// Do any additional setup after loading the view, typically from a nib.

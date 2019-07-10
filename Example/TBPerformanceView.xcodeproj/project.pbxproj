@@ -321,21 +321,21 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TBPerformanceView_Example/Pods-TBPerformanceView_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TBPerformanceView_Example/Pods-TBPerformanceView_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TBPerformanceView/TBPerformanceView.framework",
+				"${BUILT_PRODUCTS_DIR}/TBToolCategory/TBToolCategory.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TBPerformanceView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TBToolCategory.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBPerformanceView_Example/Pods-TBPerformanceView_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TBPerformanceView_Example/Pods-TBPerformanceView_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3FC91C42349F6756C826F7E /* [CP] Check Pods Manifest.lock */ = {

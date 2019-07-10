@@ -32,7 +32,7 @@
 }
 
 - (void)buildTableView {
-    self.listView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    self.listView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, SCREEN_HEIGHT) style:UITableViewStylePlain];
     self.listView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin;
     
     self.listView.height = SCREEN_HEIGHT - 20;

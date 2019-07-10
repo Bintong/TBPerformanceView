@@ -41,4 +41,6 @@ A collection of tools for iOS device performance persistence to detect and evalu
    s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
    s.dependency 'SDWebImage'
+   s.dependency 'TBToolCategory'
+
 end

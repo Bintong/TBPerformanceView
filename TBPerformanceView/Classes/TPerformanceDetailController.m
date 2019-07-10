@@ -6,7 +6,7 @@
 //
 
 #import "TPerformanceDetailController.h"
-#import "UIView+Coordinate.h"
+
 #import "TBDirctoryController.h"
 #import "TestLayerController.h"
 #import "TBPerformanceBoard.h"
