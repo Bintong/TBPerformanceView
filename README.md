@@ -6,10 +6,15 @@
 
 ## Demo
 
+###Preview
+#### mainview
 ![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/Mar-21-2019%2013-40-57.gif)
+#### views layers
 ![DEMO](https://github.com/Bintong/TBPerformanceView/blob/dev/Apr-02-2019%2014-16-56.gif)
+#### net log
 ![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/Apr-11-2019%2015-46-08.gif)
-
+#### app info
+![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/infoapp.gif)
 
 ## Use
 
