@@ -27,6 +27,7 @@ API_AVAILABLE(ios(9.0))
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self buildListView];
     [self buildDatas];
     
