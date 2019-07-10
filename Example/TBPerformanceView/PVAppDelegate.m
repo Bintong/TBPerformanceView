@@ -7,12 +7,23 @@
 //
 
 #import "PVAppDelegate.h"
-
+#import "PVViewController.h"
 @implementation PVAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor clearColor];
+    [self.window makeKeyAndVisible];
+    
+    PVViewController *cv = [[PVViewController alloc]init];
+    UINavigationController *ctr = [[UINavigationController alloc] initWithRootViewController:cv];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];//[UIColor colorWithRed:30.0f/255 green:95.0f/255 blue:185.0f/255 alpha:1.0f]];
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    //
+    self.window.rootViewController = ctr;
+    self.window.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 

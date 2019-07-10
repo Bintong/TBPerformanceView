@@ -12,7 +12,7 @@
 #import "TBPerformanceBoard.h"
 #import "TBNetDetailController.h"
 #import "TBCycleInfoViewController.h"
-
+#import "AppDetailInfoController.h"
 @interface TPerformanceDetailController()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *listView;
@@ -80,7 +80,7 @@
     if (indexPath.row == 0) {
         ctr = [[TBDirctoryController alloc] init];
     }else if(indexPath.row == 1){
-//        ctr = [[SculptDrawImgController alloc] init];
+        ctr = [[AppDetailInfoController alloc] init];
     }else if(indexPath.row == 2){
         ctr = [[TBNetDetailController alloc] init];
     }else if(indexPath.row == 3){

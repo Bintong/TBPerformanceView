@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     if (_boardView.height < 300) {
 
       
-        UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(15, _topLabel.height + 4, SCREEN_WIDTH - 30, 300)];
+        UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(15,100, SCREEN_WIDTH - 30, 300)];
         text.textColor = [UIColor redColor];
         text.font = [UIFont systemFontOfSize:14];
         text.editable = NO;
@@ -139,7 +139,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     _type = PB_Detail;
     if (!ctr) {}
    
-    [self createPeroformanceBoardUpOnView:ctr.view.window];
+    [self createPeroformanceBoardUpOnView:ctr.view];
     _rootViewController = ctr;
     _type = PB_Detail;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDetail)];
@@ -163,7 +163,7 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 
 - (void)createShowView:(UIView *)view{
     if (view && ![view viewWithTag:1001]) {
-        TBBoardView *topView = [[TBBoardView alloc] initWithFrame:CGRectMake(1, 50, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];
+        TBBoardView *topView = [[TBBoardView alloc] initWithFrame:CGRectMake(1, 150, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];
         _boardView = topView;
         topView.backgroundColor = [UIColor blackColor];
         topView.layer.cornerRadius = 4;
