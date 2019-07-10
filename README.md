@@ -6,7 +6,7 @@
 
 ## Demo
 
-###Preview
+### Preview
 #### mainview
 ![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/Mar-21-2019%2013-40-57.gif)
 #### views layers
