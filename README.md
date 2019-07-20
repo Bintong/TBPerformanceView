@@ -4,17 +4,27 @@
 [![License](https://img.shields.io/cocoapods/l/TBPerformanceView.svg?style=flat)](https://cocoapods.org/pods/TBPerformanceView)
 [![Platform](https://img.shields.io/cocoapods/p/TBPerformanceView.svg?style=flat)](https://cocoapods.org/pods/TBPerformanceView)
 
-## Demo
+## Preview
 
-### Preview
-#### mainview
-![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/Mar-21-2019%2013-40-57.gif)
-#### views layers
-![DEMO](https://github.com/Bintong/TBPerformanceView/blob/dev/Apr-02-2019%2014-16-56.gif)
-#### net log
-![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/Apr-11-2019%2015-46-08.gif)
-#### app info
-![DEMO](https://github.com/Bintong/TBPerformanceView/blob/master/infoapp.gif)
+
+<div style="text-align: center"><table><tr>
+<td style="text-align: center">
+<img src="https://github.com/Bintong/TBPerformanceView/blob/master/Mar-21-2019%2013-40-57.gif" width="250" />
+</td>
+<td style="text-align: center">
+<img src="https://github.com/Bintong/TBPerformanceView/blob/dev/Apr-02-2019%2014-16-56" width="250"/>
+</td>
+    
+<td style="text-align: center">
+<img src="    https://github.com/Bintong/TBPerformanceView/blob/master/Apr-11-2019%2015-46-08" width="250"/>
+</td>
+    
+<td style="text-align: center">
+<img src="https://github.com/Bintong/TBPerformanceView/blob/master/infoapp.gif" width="250"/>
+
+</td>
+</tr></table></div>
+
 
 ## Use
 
