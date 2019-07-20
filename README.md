@@ -12,16 +12,15 @@
 <img src="https://github.com/Bintong/TBPerformanceView/blob/master/Mar-21-2019%2013-40-57.gif" width="250" />
 </td>
 <td style="text-align: center">
-<img src="https://github.com/Bintong/TBPerformanceView/blob/dev/Apr-02-2019%2014-16-56" width="250"/>
+<img src="https://github.com/Bintong/TBPerformanceView/blob/dev/Apr-02-2019%2014-16-56.gif" width="250"/>
 </td>
     
 <td style="text-align: center">
-<img src="    https://github.com/Bintong/TBPerformanceView/blob/master/Apr-11-2019%2015-46-08" width="250"/>
+<img src="https://github.com/Bintong/TBPerformanceView/blob/master/Apr-11-2019%2015-46-08.gif" width="250"/>
 </td>
     
 <td style="text-align: center">
 <img src="https://github.com/Bintong/TBPerformanceView/blob/master/infoapp.gif" width="250"/>
-
 </td>
 </tr></table></div>
 
