@@ -11,7 +11,6 @@
 
 + (NSString *)applicationVersion {
     return appInfoDictionary()[@"CFBundleShortVersionString"];
-
 }
 
 + (NSString *)phoneSystemVersion {
