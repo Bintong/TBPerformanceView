@@ -27,7 +27,7 @@
     [super viewDidLoad];
     [TBPerformanceBoard sharedInstance].showedDetails = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@"沙盒路径",@"App 详细信息",@"网络请求",@"页面Layder",@"页面加载信息"];
+    self.dataArray = @[@"沙盒路径",@"App 详细信息",@"网络请求",@"页面Layder",@"页面加载信息",@"ANR卡顿",@"Crash"];
     [self buildTableView];
     
     // Do any additional setup after loading the view.
