@@ -24,6 +24,8 @@
     //
     self.window.rootViewController = ctr;
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    
     return YES;
 }
 
