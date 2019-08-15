@@ -302,8 +302,8 @@
 		1AB3EFC5E4CC51960C4C3D6CCA7B5F14 /* SDMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDMemoryCache.h; path = SDWebImage/SDMemoryCache.h; sourceTree = "<group>"; };
 		1B802CB2E1710B3445CB1B02D986C984 /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/SDImageLoadersManager.h; sourceTree = "<group>"; };
 		1F97FC9CA0133DBF2FF82E71005530F9 /* SDImageCachesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManager.m; path = SDWebImage/SDImageCachesManager.m; sourceTree = "<group>"; };
-		1FD1A0614EE8FDDFF73DA173F34BBE0A /* TBCupUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBCupUse.m; path = TBPerformanceView/Classes/TBCupUse.m; sourceTree = "<group>"; };
-		21EAF168DEAE5FD0D05278F6A0FFEC43 /* TBDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBDeviceInfo.m; path = TBPerformanceView/Classes/TBDeviceInfo.m; sourceTree = "<group>"; };
+		1FD1A0614EE8FDDFF73DA173F34BBE0A /* TBCupUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBCupUse.m; sourceTree = "<group>"; };
+		21EAF168DEAE5FD0D05278F6A0FFEC43 /* TBDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBDeviceInfo.m; sourceTree = "<group>"; };
 		2235645132D98512158CC57C1A45B178 /* SDWebImageDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDefine.m; path = SDWebImage/SDWebImageDefine.m; sourceTree = "<group>"; };
 		22C290026A94DBB39E4709B76FD87034 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "TBToolCategory/Classes/UIColor+Hex.h"; sourceTree = "<group>"; };
 		22F405A827CF030DA5B492CEAD95D0F8 /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/SDImageCacheDefine.m; sourceTree = "<group>"; };
@@ -316,8 +316,8 @@
 		27A80DE2A1FDBF159777252DC7D17F05 /* Pods-TBPerformanceView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBPerformanceView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		27E0BDAFAB058F7F661B5DA114A9D653 /* SDImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoader.h; path = SDWebImage/SDImageLoader.h; sourceTree = "<group>"; };
 		2A174BF2E2A6439F1B251ED32FF8F6DC /* TBCycleInfoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBCycleInfoViewController.m; path = TBPerformanceView/Classes/TBCycleInfoViewController.m; sourceTree = "<group>"; };
-		2AC86A685D7FDFEE0F439002C59301A2 /* TBDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBDeviceInfo.h; path = TBPerformanceView/Classes/TBDeviceInfo.h; sourceTree = "<group>"; };
-		2B3600C91903D6A87DB1F05C9573343A /* TBFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBFileManager.h; path = TBPerformanceView/Classes/TBFileManager.h; sourceTree = "<group>"; };
+		2AC86A685D7FDFEE0F439002C59301A2 /* TBDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBDeviceInfo.h; sourceTree = "<group>"; };
+		2B3600C91903D6A87DB1F05C9573343A /* TBFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBFileManager.h; sourceTree = "<group>"; };
 		2B531BAD016AF9548816FFFFBBC406DF /* SDWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWeakProxy.h; path = SDWebImage/Private/SDWeakProxy.h; sourceTree = "<group>"; };
 		2BDFECD550249C6ADAA452D6DA822EB5 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
 		2EB7F63162971DBB744C9214804F2389 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
@@ -382,12 +382,12 @@
 		6FFD80CC214794BBE953995BF2526436 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		70636ABA33CB979A10CE94F2442B25CF /* SDImageTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageTransformer.h; path = SDWebImage/SDImageTransformer.h; sourceTree = "<group>"; };
 		731FDA1E372D92DF627B8FC1464215F9 /* TBToolCategory-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBToolCategory-umbrella.h"; sourceTree = "<group>"; };
-		735F9DAD03374002AE808279F0ED9420 /* TBDirctoryModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBDirctoryModel.m; path = TBPerformanceView/Classes/TBDirctoryModel.m; sourceTree = "<group>"; };
+		735F9DAD03374002AE808279F0ED9420 /* TBDirctoryModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBDirctoryModel.m; sourceTree = "<group>"; };
 		741DDA3D6C0C215858B2F2AB47D402A3 /* NSURLResponse+DoggerMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+DoggerMonitor.h"; sourceTree = "<group>"; };
 		75472B12999FF910E9DA1292C83EE6DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		77FA9A89A84002BAF8E4CDEE9EE8A764 /* TBMemeryUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBMemeryUse.h; path = TBPerformanceView/Classes/TBMemeryUse.h; sourceTree = "<group>"; };
+		77FA9A89A84002BAF8E4CDEE9EE8A764 /* TBMemeryUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBMemeryUse.h; sourceTree = "<group>"; };
 		780C93C933DF6F4BCB5534BE915178A8 /* UILabel+WPAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+WPAdd.h"; path = "TBToolCategory/Classes/UILabel+WPAdd.h"; sourceTree = "<group>"; };
-		792D19680F39C045841554CA766A931B /* TBDirctoryController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBDirctoryController.m; path = TBPerformanceView/Classes/TBDirctoryController.m; sourceTree = "<group>"; };
+		792D19680F39C045841554CA766A931B /* TBDirctoryController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBDirctoryController.m; sourceTree = "<group>"; };
 		7AE4E44BA028790B320BBCF4EAFBE770 /* TBNetMonitorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBNetMonitorUtil.m; sourceTree = "<group>"; };
 		7B2BB24C8A98D0CA49B227E379ED7B19 /* SDImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoderHelper.h; path = SDWebImage/SDImageCoderHelper.h; sourceTree = "<group>"; };
 		7B61CBF6E269B16949110D3408D5547A /* TBNetSummaryInfoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBNetSummaryInfoView.m; sourceTree = "<group>"; };
@@ -398,7 +398,7 @@
 		7FDF3F7508339481983F38E5A4C63ED9 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		8075244EB455F27372877D19EF4262BA /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/UIImage+Metadata.m"; sourceTree = "<group>"; };
 		8429C472A81C73EB9AAFCD9D5179BBB1 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
-		853186EFB13FAC25B4DB66EF4E4D023F /* TBDirctoryController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBDirctoryController.h; path = TBPerformanceView/Classes/TBDirctoryController.h; sourceTree = "<group>"; };
+		853186EFB13FAC25B4DB66EF4E4D023F /* TBDirctoryController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBDirctoryController.h; sourceTree = "<group>"; };
 		8547E95661113B1A2CADA6C08DD62C5C /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		8555907990DCE5DA13A2A56FA7DC6B83 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		866E6AF108E92ACCC73B687DDBF9277F /* TBCycleViewHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBCycleViewHelper.m; path = TBPerformanceView/Classes/TBCycleViewHelper.m; sourceTree = "<group>"; };
@@ -446,23 +446,23 @@
 		A9C6111A4D0A23EDB9D79D6207A8FD2F /* Pods-TBPerformanceView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBPerformanceView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA54B9FA0099D3956FA2C7051C71B941 /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/SDImageCoder.m; sourceTree = "<group>"; };
 		ACBFE20417B9F3D43734ADC6BAC1EACB /* TBCycleViewHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBCycleViewHelper.h; path = TBPerformanceView/Classes/TBCycleViewHelper.h; sourceTree = "<group>"; };
-		ACCB685C6C6676DE6DEEAFA6829D9513 /* TBMemeryUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBMemeryUse.m; path = TBPerformanceView/Classes/TBMemeryUse.m; sourceTree = "<group>"; };
+		ACCB685C6C6676DE6DEEAFA6829D9513 /* TBMemeryUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBMemeryUse.m; sourceTree = "<group>"; };
 		AD92EC998A977678F43E6895674D8ABB /* Pods-TBPerformanceView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBPerformanceView_Example-Info.plist"; sourceTree = "<group>"; };
 		AF3FA9F9C997FAB63691A2D551C66FF7 /* LMCheckObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LMCheckObject.h; path = TBToolCategory/Classes/LMCheckObject.h; sourceTree = "<group>"; };
-		AFE27B52E793CB04252563F7728692BC /* TBDirctoryModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBDirctoryModel.h; path = TBPerformanceView/Classes/TBDirctoryModel.h; sourceTree = "<group>"; };
+		AFE27B52E793CB04252563F7728692BC /* TBDirctoryModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBDirctoryModel.h; sourceTree = "<group>"; };
 		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C5259F517E7001F8574AC94B870E55 /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
 		B18E7828039ECD5700A24C83B0F8813B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B1912A130DBFE4F9FDDF8B9B5EE29483 /* SDWebImageDownloaderRequestModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderRequestModifier.m; path = SDWebImage/SDWebImageDownloaderRequestModifier.m; sourceTree = "<group>"; };
 		B1D447E3A38136E239B87A48AD69533F /* TBToolCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBToolCategory-prefix.pch"; sourceTree = "<group>"; };
-		B285DDDB55CC831560996BE1843F2841 /* TBCupUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBCupUse.h; path = TBPerformanceView/Classes/TBCupUse.h; sourceTree = "<group>"; };
+		B285DDDB55CC831560996BE1843F2841 /* TBCupUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBCupUse.h; sourceTree = "<group>"; };
 		B3550D1574018FCBB6920C3E236FB237 /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/SDWebImageTransition.h; sourceTree = "<group>"; };
 		B3556BF874E211F0BDD557301F37A2AA /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		B3698C06767B74CB0FB16BA0B3CB9789 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/NSButton+WebCache.m"; sourceTree = "<group>"; };
 		B40DAB13E2274463302D33964F2EF4DC /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/SDImageIOCoder.m; sourceTree = "<group>"; };
 		B4458BD338442DF5223F97C6DEA9E018 /* NSImage+Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+Compatibility.h"; path = "SDWebImage/NSImage+Compatibility.h"; sourceTree = "<group>"; };
 		B598AAC7D18F929827183D6765E9C047 /* TBPerRuntimeUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBPerRuntimeUtils.m; sourceTree = "<group>"; };
-		B6458A968B9AA4F49498A0AB279BE899 /* TBFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TBFileManager.m; path = TBPerformanceView/Classes/TBFileManager.m; sourceTree = "<group>"; };
+		B6458A968B9AA4F49498A0AB279BE899 /* TBFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBFileManager.m; sourceTree = "<group>"; };
 		B6D4AE46FB0880748236A498056C2F78 /* TestLayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TestLayerController.h; sourceTree = "<group>"; };
 		B750230D3969FC708CF02A62C2C33100 /* WPCommonDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WPCommonDefine.h; path = TBToolCategory/Classes/WPCommonDefine.h; sourceTree = "<group>"; };
 		B77F5FC128401DE4F51CDB6D4E542943 /* SDInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDInternalMacros.h; path = SDWebImage/Private/SDInternalMacros.h; sourceTree = "<group>"; };
@@ -685,26 +685,16 @@
 		8AFB6CC5117079110AA49376871F47B9 /* TBPerformanceView */ = {
 			isa = PBXGroup;
 			children = (
+				A69972FF22EB6FE500A393A2 /* SandBox */,
+				A69972FE22EB6E8F00A393A2 /* AppNormalPerformance */,
 				A6C1742222D5B3BA007DD285 /* AppDetail */,
 				98E783C36974EBB9022C1B71BB79752A /* PrefixHeader.pch */,
 				BE42AF836C2C17CDE1B312FCF101BDE2 /* TBBoardView.h */,
 				CEA4EB9083264CFEC3A09E3AC24EBB3C /* TBBoardView.m */,
-				B285DDDB55CC831560996BE1843F2841 /* TBCupUse.h */,
-				1FD1A0614EE8FDDFF73DA173F34BBE0A /* TBCupUse.m */,
 				BC1842C0E8DD8E6F9A9A8975065C275F /* TBCycleInfoViewController.h */,
 				2A174BF2E2A6439F1B251ED32FF8F6DC /* TBCycleInfoViewController.m */,
 				ACBFE20417B9F3D43734ADC6BAC1EACB /* TBCycleViewHelper.h */,
 				866E6AF108E92ACCC73B687DDBF9277F /* TBCycleViewHelper.m */,
-				2AC86A685D7FDFEE0F439002C59301A2 /* TBDeviceInfo.h */,
-				21EAF168DEAE5FD0D05278F6A0FFEC43 /* TBDeviceInfo.m */,
-				853186EFB13FAC25B4DB66EF4E4D023F /* TBDirctoryController.h */,
-				792D19680F39C045841554CA766A931B /* TBDirctoryController.m */,
-				AFE27B52E793CB04252563F7728692BC /* TBDirctoryModel.h */,
-				735F9DAD03374002AE808279F0ED9420 /* TBDirctoryModel.m */,
-				2B3600C91903D6A87DB1F05C9573343A /* TBFileManager.h */,
-				B6458A968B9AA4F49498A0AB279BE899 /* TBFileManager.m */,
-				77FA9A89A84002BAF8E4CDEE9EE8A764 /* TBMemeryUse.h */,
-				ACCB685C6C6676DE6DEEAFA6829D9513 /* TBMemeryUse.m */,
 				6A1E454D43B5C972666809CF4A73221C /* TBPerformanceBoard.h */,
 				EFCAD60B081F606E28F00B8D4C0ADAB4 /* TBPerformanceBoard.m */,
 				39B35FA73BA0F28A47BE6BF73B381935 /* TPerformanceDetailController.h */,
@@ -773,9 +763,35 @@
 			path = TBPerformanceView/Classes/CheckLayer;
 			sourceTree = "<group>";
 		};
+		A69972FE22EB6E8F00A393A2 /* AppNormalPerformance */ = {
+			isa = PBXGroup;
+			children = (
+				B285DDDB55CC831560996BE1843F2841 /* TBCupUse.h */,
+				1FD1A0614EE8FDDFF73DA173F34BBE0A /* TBCupUse.m */,
+				77FA9A89A84002BAF8E4CDEE9EE8A764 /* TBMemeryUse.h */,
+				ACCB685C6C6676DE6DEEAFA6829D9513 /* TBMemeryUse.m */,
+			);
+			path = AppNormalPerformance;
+			sourceTree = "<group>";
+		};
+		A69972FF22EB6FE500A393A2 /* SandBox */ = {
+			isa = PBXGroup;
+			children = (
+				853186EFB13FAC25B4DB66EF4E4D023F /* TBDirctoryController.h */,
+				792D19680F39C045841554CA766A931B /* TBDirctoryController.m */,
+				AFE27B52E793CB04252563F7728692BC /* TBDirctoryModel.h */,
+				735F9DAD03374002AE808279F0ED9420 /* TBDirctoryModel.m */,
+				2B3600C91903D6A87DB1F05C9573343A /* TBFileManager.h */,
+				B6458A968B9AA4F49498A0AB279BE899 /* TBFileManager.m */,
+			);
+			path = SandBox;
+			sourceTree = "<group>";
+		};
 		A6C1742222D5B3BA007DD285 /* AppDetail */ = {
 			isa = PBXGroup;
 			children = (
+				2AC86A685D7FDFEE0F439002C59301A2 /* TBDeviceInfo.h */,
+				21EAF168DEAE5FD0D05278F6A0FFEC43 /* TBDeviceInfo.m */,
 				A6C1742322D5B3CC007DD285 /* AppDetailInfoController.h */,
 				A6C1742422D5B3CC007DD285 /* AppDetailInfoController.m */,
 				A6C1742822D5B9B2007DD285 /* DetailTableViewCell.h */,
