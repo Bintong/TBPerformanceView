@@ -13,6 +13,7 @@
 #import "TBDeviceInfo.h"
 #import "TPerformanceDetailController.h"
 #import "CheckLayerView.h"
+#import "TBWindow.h"
 //#import "TBNetReachability.h"
 //#import "AppDelegate.h"
 #import "TBBoardView.h"
@@ -25,6 +26,8 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 };
 
 @interface TBPerformanceBoard()<CheckLayerViewDeleaget>
+
+@property (nonatomic , strong , nonnull) TBWindow *tbWindow  ;
 
 @property (strong ,nonatomic) CADisplayLink *displayLink;
 @property (strong ,nonatomic) TBBoardView *boardView;
@@ -104,6 +107,27 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)startWorkingOnViewController:(UIViewController *)ctr {
+    // start working
+    if (_displayLink && (!_displayLink.paused)) {
+        _displayLink.paused = YES;
+    }
+    
+    
+    [self createShowView:ctr.view];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
+    
+    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkTick:)];
+    _displayLink.frameInterval = 1;
+    [_displayLink setPaused:YES];
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    
+     [self open];
+}
+    
 - (void)createPeroformanceWithDeviceInfo:(UIView *)view {
     if (_displayLink && (!_displayLink.paused)) {
         _displayLink.paused = YES;
@@ -142,13 +166,11 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     [self createPeroformanceBoardUpOnView:ctr.view];
     _rootViewController = ctr;
     _type = PB_Detail;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDetail)];
-    [self.boardView addGestureRecognizer:tap];
-    
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDetail)];
+//    [self.boardView addGestureRecognizer:tap];
 }
 
-
-
+ 
 
 
 - (void)pushToDetail {

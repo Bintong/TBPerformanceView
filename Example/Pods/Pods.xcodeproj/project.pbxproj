@@ -128,6 +128,10 @@
 		A512750A4B3858478A3040102E510496 /* UILabel+WPAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 780C93C933DF6F4BCB5534BE915178A8 /* UILabel+WPAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5804E961E1997EDB1CA7B0E38AE9C46 /* TBNetSummaryInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6324D92C2ED1823EEC552A8B4F6953 /* TBNetSummaryInfoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5C67537FC8DAEC71616E7F4940FB01E /* TBInternalRequestState.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D2CED6AE38C57102F6327991DEA920 /* TBInternalRequestState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A63A9D582309698900C17B77 /* TBWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A63A9D562309698900C17B77 /* TBWindow.h */; };
+		A63A9D592309698900C17B77 /* TBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A9D572309698900C17B77 /* TBWindow.m */; };
+		A63A9D5C23096A5F00C17B77 /* TBWindowViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A63A9D5A23096A5F00C17B77 /* TBWindowViewController.h */; };
+		A63A9D5D23096A5F00C17B77 /* TBWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A9D5B23096A5F00C17B77 /* TBWindowViewController.m */; };
 		A6C1742522D5B3CC007DD285 /* AppDetailInfoController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C1742322D5B3CC007DD285 /* AppDetailInfoController.h */; };
 		A6C1742722D5B3D0007DD285 /* AppDetailInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C1742422D5B3CC007DD285 /* AppDetailInfoController.m */; };
 		A6C1742A22D5B9B2007DD285 /* DetailTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C1742822D5B9B2007DD285 /* DetailTableViewCell.h */; };
@@ -436,6 +440,10 @@
 		A336F03FBBDABFC86716AAE868CC7DCF /* TPerformanceDetailController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPerformanceDetailController.m; path = TBPerformanceView/Classes/TPerformanceDetailController.m; sourceTree = "<group>"; };
 		A3CFF454C9039E47DD83C6418062DA9D /* SDImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageFrame.m; path = SDWebImage/SDImageFrame.m; sourceTree = "<group>"; };
 		A4F24370B0238EA27C502E6D14CD9110 /* Pods-TBPerformanceView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBPerformanceView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A63A9D562309698900C17B77 /* TBWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBWindow.h; sourceTree = "<group>"; };
+		A63A9D572309698900C17B77 /* TBWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBWindow.m; sourceTree = "<group>"; };
+		A63A9D5A23096A5F00C17B77 /* TBWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBWindowViewController.h; sourceTree = "<group>"; };
+		A63A9D5B23096A5F00C17B77 /* TBWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBWindowViewController.m; sourceTree = "<group>"; };
 		A6C1742322D5B3CC007DD285 /* AppDetailInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailInfoController.h; sourceTree = "<group>"; };
 		A6C1742422D5B3CC007DD285 /* AppDetailInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailInfoController.m; sourceTree = "<group>"; };
 		A6C1742822D5B9B2007DD285 /* DetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTableViewCell.h; sourceTree = "<group>"; };
@@ -685,6 +693,7 @@
 		8AFB6CC5117079110AA49376871F47B9 /* TBPerformanceView */ = {
 			isa = PBXGroup;
 			children = (
+				A63A9D5323094F5B00C17B77 /* UserInterface */,
 				A69972FF22EB6FE500A393A2 /* SandBox */,
 				A69972FE22EB6E8F00A393A2 /* AppNormalPerformance */,
 				A6C1742222D5B3BA007DD285 /* AppDetail */,
@@ -761,6 +770,17 @@
 			);
 			name = CheckLayer;
 			path = TBPerformanceView/Classes/CheckLayer;
+			sourceTree = "<group>";
+		};
+		A63A9D5323094F5B00C17B77 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				A63A9D562309698900C17B77 /* TBWindow.h */,
+				A63A9D572309698900C17B77 /* TBWindow.m */,
+				A63A9D5A23096A5F00C17B77 /* TBWindowViewController.h */,
+				A63A9D5B23096A5F00C17B77 /* TBWindowViewController.m */,
+			);
+			path = UserInterface;
 			sourceTree = "<group>";
 		};
 		A69972FE22EB6E8F00A393A2 /* AppNormalPerformance */ = {
@@ -1149,6 +1169,7 @@
 				A6C1742A22D5B9B2007DD285 /* DetailTableViewCell.h in Headers */,
 				99A8C51437DF24349355FA64BF667EC4 /* TBCycleViewHelper.h in Headers */,
 				843C55ECEEB72169BEFF9E384E67D3C5 /* TBDeviceInfo.h in Headers */,
+				A63A9D5C23096A5F00C17B77 /* TBWindowViewController.h in Headers */,
 				560F8FF138781E8EC581954239109CD4 /* TBDirctoryController.h in Headers */,
 				9610DFA77FA92DAFFCB4C8BFBA852432 /* TBDirctoryModel.h in Headers */,
 				CC225517925AE2407A937A355EBBCD29 /* TBFileManager.h in Headers */,
@@ -1156,6 +1177,7 @@
 				AF4D1BAB55291A0ECFF3859A826D9A26 /* TBMemeryUse.h in Headers */,
 				F557CDEEF68FCBCDFC3CE295EDD95632 /* TBNetDetailController.h in Headers */,
 				23C5C14270C05AC25A724798A9BABE6F /* TBNetMonitorDetailController.h in Headers */,
+				A63A9D582309698900C17B77 /* TBWindow.h in Headers */,
 				1709975F18A3583028B0365C1C866D99 /* TBNetMonitorManager.h in Headers */,
 				654C6C209931C26523C15C4E970B347F /* TBnetMonitorModel.h in Headers */,
 				F94D46F9FF00F99F0906701D97FCA786 /* TBNetMonitorUtil.h in Headers */,
@@ -1282,6 +1304,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					229F4E49508012EBBDECBE781D4866A2 = {
+						LastSwiftMigration = 1030;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1430,7 +1457,9 @@
 				6ACFBCD7D1D17C083465FD377D5F3C9A /* TBNetMonitorManager.m in Sources */,
 				CE3C5CF30A88491AE6C00D201FB3F5BA /* TBnetMonitorModel.m in Sources */,
 				156583E45000249BD8D34301CCE554D5 /* TBNetMonitorUtil.m in Sources */,
+				A63A9D5D23096A5F00C17B77 /* TBWindowViewController.m in Sources */,
 				A6C1742F22D5B9C4007DD285 /* DetailUtil.m in Sources */,
+				A63A9D592309698900C17B77 /* TBWindow.m in Sources */,
 				CB08B84430E20939C6287751C141FAF3 /* TBNetSessionProtocol.m in Sources */,
 				1966891281EA4379E565C8CFECA7B91F /* TBNetSummaryInfo.m in Sources */,
 				A78732CA2C5BB0AFD5BE7D5D9E9ABB85 /* TBNetSummaryInfoView.m in Sources */,
@@ -1715,6 +1744,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 698A416A494133DD581DD07EF86E8AC8 /* TBPerformanceView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1735,6 +1765,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1746,6 +1777,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 698A416A494133DD581DD07EF86E8AC8 /* TBPerformanceView.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1766,6 +1798,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
