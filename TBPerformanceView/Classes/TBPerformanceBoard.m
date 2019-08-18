@@ -17,11 +17,15 @@
 //#import "TBNetReachability.h"
 //#import "AppDelegate.h"
 #import "TBBoardView.h"
+#import "TBCricleView.h"
+
+#define  kCtricleHeight  110
 
 typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     PB_Normarl = 0,                         // no button type
     PB_DeviceInfo,
     PB_Detail,
+    PB_Circle,
     
 };
 
@@ -113,8 +117,9 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         _displayLink.paused = YES;
     }
     
-    
-    [self createShowView:ctr.view];
+    _type = PB_Circle;
+
+    [self createCricleView:ctr.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
@@ -183,6 +188,31 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     }
 }
 
+    
+
+//    简单数据圆形
+- (void)createCricleView:(UIView *)view{
+    if (view && ![view viewWithTag:1001]) {
+        TBCricleView *topView = [[TBCricleView alloc] initWithFrame:CGRectMake(1, 150,kCtricleHeight, kCtricleHeight)];
+        [topView setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5]];
+        topView.layer.cornerRadius = 4;
+        topView.layer.masksToBounds = YES;
+        topView.tag = 1001;
+        
+        if (view) {
+            [view addSubview:topView];
+        }else {
+            UIWindow *w = [[UIApplication sharedApplication] keyWindow];
+            [w addSubview:topView];
+        }
+        UILabel *l = [self labelWithFontSize:12 FontColor:[UIColor whiteColor] frame:CGRectMake(0, 0, kCtricleHeight, kCtricleHeight) Text:@""];
+        l.textAlignment = NSTextAlignmentCenter;
+        self.topLabel = l;
+        [topView addSubview:l];
+    }
+}
+
+//    长条形状 方便更多数据
 - (void)createShowView:(UIView *)view{
     if (view && ![view viewWithTag:1001]) {
         TBBoardView *topView = [[TBBoardView alloc] initWithFrame:CGRectMake(1, 150, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];
@@ -239,7 +269,14 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         _topLabel.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 100, 50);
         _topLabel.numberOfLines = 0;
         _topLabel.textAlignment = NSTextAlignmentCenter;
-    }else {
+    } else if (_type == PB_Circle) {
+        
+        _topLabel.frame = CGRectMake(0, 0, kCtricleHeight,kCtricleHeight);
+        _topLabel.numberOfLines = 0;
+        _topLabel.textAlignment = NSTextAlignmentCenter;
+        string = [NSString stringWithFormat:@"CPU:%0.2f%% \n Memory:%0.2fMb \n FPS:%0.2f \n AppVersion:%@ \n iOS : %@",cpuUse,memeryUse,fps,app_version,ios_version];
+
+    } else {
         string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMERY:%0.2fMb; FPS:%0.2f",cpuUse,memeryUse,fps];
     }
     
