@@ -21,16 +21,20 @@ NS_ASSUME_NONNULL_BEGIN
 + (TBPerformanceBoard *)sharedInstance;
 
 
+- (void)startWorkingOnViewController:(UIViewController *)ctr;
+    
 /**
  create Board On View
 
  @param view Up on view
  */
-- (void)createPeroformanceBoardUpOnView:(UIView *)view ;
+//- (void)createPeroformanceBoardUpOnView:(UIView *)view ;
+//
+//- (void)createPeroformanceWithDeviceInfo:(UIView *)view;
 
-- (void)createPeroformanceWithDeviceInfo:(UIView *)view;
+//- (void)createClickPeroformanceWithDeviceInfo:(UIViewController *)ctr;
+    
 
-- (void)createClickPeroformanceWithDeviceInfo:(UIViewController *)ctr;
 
 
 /**
