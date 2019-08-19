@@ -17,11 +17,15 @@
 //#import "TBNetReachability.h"
 //#import "AppDelegate.h"
 #import "TBBoardView.h"
+#import "TBCricleView.h"
+
+#define  kCtricleHeight  110
 
 typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     PB_Normarl = 0,                         // no button type
     PB_DeviceInfo,
     PB_Detail,
+    PB_Circle,
     
 };
 
@@ -50,8 +54,8 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 - (void)showDetailViewSuperViews:(NSArray *)views {
     
     if (_boardView.height < 300) {
-
-      
+        
+        
         UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(15,100, SCREEN_WIDTH - 30, 300)];
         text.textColor = [UIColor redColor];
         text.font = [UIFont systemFontOfSize:14];
@@ -66,9 +70,9 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         [closeBt setTintColor:[UIColor whiteColor]];
         [closeBt addTarget:self action:@selector(closeDetailView:) forControlEvents:UIControlEventTouchUpInside];
         [_boardView addSubview:text];
-       
+        
         [_boardView addSubview:closeBt];
- 
+        
     }else {
         _detailBoardView.hidden = NO;
     }
@@ -113,8 +117,9 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         _displayLink.paused = YES;
     }
     
+    _type = PB_Circle;
     
-    [self createShowView:ctr.view];
+    [self createCricleView:ctr.view];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActiveNotification:) name:UIApplicationDidBecomeActiveNotification object:nil];
     
@@ -125,9 +130,9 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     [_displayLink setPaused:YES];
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     
-     [self open];
+    [self open];
 }
-    
+
 - (void)createPeroformanceWithDeviceInfo:(UIView *)view {
     if (_displayLink && (!_displayLink.paused)) {
         _displayLink.paused = YES;
@@ -162,15 +167,15 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     }
     _type = PB_Detail;
     if (!ctr) {}
-   
+    
     [self createPeroformanceBoardUpOnView:ctr.view];
     _rootViewController = ctr;
     _type = PB_Detail;
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDetail)];
-//    [self.boardView addGestureRecognizer:tap];
+    //    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushToDetail)];
+    //    [self.boardView addGestureRecognizer:tap];
 }
 
- 
+
 
 
 - (void)pushToDetail {
@@ -183,6 +188,31 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
     }
 }
 
+
+
+//    简单数据圆形
+- (void)createCricleView:(UIView *)view{
+    if (view && ![view viewWithTag:1001]) {
+        TBCricleView *topView = [[TBCricleView alloc] initWithFrame:CGRectMake(1, 150,kCtricleHeight, kCtricleHeight)];
+        [topView setBackgroundColor:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5]];
+        topView.layer.cornerRadius = 4;
+        topView.layer.masksToBounds = YES;
+        topView.tag = 1001;
+        
+        if (view) {
+            [view addSubview:topView];
+        }else {
+            UIWindow *w = [[UIApplication sharedApplication] keyWindow];
+            [w addSubview:topView];
+        }
+        UILabel *l = [self labelWithFontSize:12 FontColor:[UIColor whiteColor] frame:CGRectMake(0, 0, kCtricleHeight, kCtricleHeight) Text:@""];
+        l.textAlignment = NSTextAlignmentCenter;
+        self.topLabel = l;
+        [topView addSubview:l];
+    }
+}
+
+//    长条形状 方便更多数据
 - (void)createShowView:(UIView *)view{
     if (view && ![view viewWithTag:1001]) {
         TBBoardView *topView = [[TBBoardView alloc] initWithFrame:CGRectMake(1, 150, [UIScreen mainScreen].bounds.size.width - 2, self.type == PB_DeviceInfo? 50: 25)];
@@ -207,24 +237,24 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 
 - (void)displayLinkTick:(CADisplayLink *)disLink {
     
-         _count ++;
-        //当前时间戳
-        if(_lastTime == 0){
-            _lastTime = disLink.timestamp;
-        }
-        CFTimeInterval timePassed = disLink.timestamp - _lastTime;
+    _count ++;
+    //当前时间戳
+    if(_lastTime == 0){
+        _lastTime = disLink.timestamp;
+    }
+    CFTimeInterval timePassed = disLink.timestamp - _lastTime;
     
-        if(timePassed >= 1.f) {
-            CGFloat fps = _count/timePassed;
-//            NSLog(@"----fps:%.1f, timePassed:%f\n", fps, timePassed);
-    
-            [self takeReadingsFromFps:fps];
-            //reset
-            _lastTime = disLink.timestamp;
-            _count = 0;
-         }else {
-             
-         }
+    if(timePassed >= 1.f) {
+        CGFloat fps = _count/timePassed;
+        //            NSLog(@"----fps:%.1f, timePassed:%f\n", fps, timePassed);
+        
+        [self takeReadingsFromFps:fps];
+        //reset
+        _lastTime = disLink.timestamp;
+        _count = 0;
+    }else {
+        
+    }
 }
 
 - (void)takeReadingsFromFps:(CGFloat)fps {
@@ -239,7 +269,14 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
         _topLabel.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 100, 50);
         _topLabel.numberOfLines = 0;
         _topLabel.textAlignment = NSTextAlignmentCenter;
-    }else {
+    } else if (_type == PB_Circle) {
+        
+        _topLabel.frame = CGRectMake(0, 0, kCtricleHeight,kCtricleHeight);
+        _topLabel.numberOfLines = 0;
+        _topLabel.textAlignment = NSTextAlignmentCenter;
+        string = [NSString stringWithFormat:@"CPU:%0.2f%% \n Memory:%0.2fMb \n FPS:%0.2f \n AppVersion:%@ \n iOS : %@",cpuUse,memeryUse,fps,app_version,ios_version];
+        
+    } else {
         string = [NSString stringWithFormat:@"CPU:%0.2f%%; MEMERY:%0.2fMb; FPS:%0.2f",cpuUse,memeryUse,fps];
     }
     
@@ -263,9 +300,6 @@ typedef NS_ENUM(NSInteger, PerformanceBoardType) {
 - (void)applicationWillResignActiveNotification:(NSNotificationCenter *)notification  {
     [self.displayLink setPaused:YES];
 }
-
-
-
 
 
 @end
