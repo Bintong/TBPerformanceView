@@ -115,7 +115,6 @@
 		9610DFA77FA92DAFFCB4C8BFBA852432 /* TBDirctoryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AFE27B52E793CB04252563F7728692BC /* TBDirctoryModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		967BFFEBD4D7158A5AEB4AF2343CC4AE /* SDAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D090B1F5CC20D1DC27DB52F735F3876 /* SDAnimatedImageView+WebCache.m */; };
 		96D1182D369E6B81241728B237E10BAC /* BMWPCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE30FAD18893993DCC681618BECAAAA /* BMWPCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9758A0C7448E8D81C9CCA5F8E2474D54 /* TBCupUse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD1A0614EE8FDDFF73DA173F34BBE0A /* TBCupUse.m */; };
 		97794390CC5632485420816F8AD53E98 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 187B5CB9E10A0DB0277DFCB4CB517B2F /* SDImageCache.m */; };
 		98C01A86E5F7C1AA2A3DAE24F6C3014D /* UILabel+WPAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E8230343DAA52CA680E6512AB02F37 /* UILabel+WPAdd.m */; };
 		99A8C51437DF24349355FA64BF667EC4 /* TBCycleViewHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = ACBFE20417B9F3D43734ADC6BAC1EACB /* TBCycleViewHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -130,6 +129,10 @@
 		A5C67537FC8DAEC71616E7F4940FB01E /* TBInternalRequestState.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D2CED6AE38C57102F6327991DEA920 /* TBInternalRequestState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A62FC3F4230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC3F3230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift */; };
 		A62FC3F6230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = A62FC3F5230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h */; };
+		A62FC3FC230A4BFA003BEC4C /* TBMemeryUse.m in Sources */ = {isa = PBXBuildFile; fileRef = A62FC3F8230A4BFA003BEC4C /* TBMemeryUse.m */; };
+		A62FC3FD230A4BFA003BEC4C /* TBCupUse.h in Headers */ = {isa = PBXBuildFile; fileRef = A62FC3F9230A4BFA003BEC4C /* TBCupUse.h */; };
+		A62FC3FE230A4BFA003BEC4C /* TBMemeryUse.h in Headers */ = {isa = PBXBuildFile; fileRef = A62FC3FA230A4BFA003BEC4C /* TBMemeryUse.h */; };
+		A62FC3FF230A4BFA003BEC4C /* TBCupUse.m in Sources */ = {isa = PBXBuildFile; fileRef = A62FC3FB230A4BFA003BEC4C /* TBCupUse.m */; };
 		A63A9D582309698900C17B77 /* TBWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A63A9D562309698900C17B77 /* TBWindow.h */; };
 		A63A9D592309698900C17B77 /* TBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A9D572309698900C17B77 /* TBWindow.m */; };
 		A63A9D5C23096A5F00C17B77 /* TBWindowViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A63A9D5A23096A5F00C17B77 /* TBWindowViewController.h */; };
@@ -150,7 +153,6 @@
 		ADF991E5F80B9F75D2E72F1DD02B1EF1 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7FE7AD8D308578F1797BD8770E64A /* SDWebImage-dummy.m */; };
 		AE0C7049B358AE2EA85ADCCD81DEF2B1 /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8555907990DCE5DA13A2A56FA7DC6B83 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE34B585C58188DCDD6143855DAF4892 /* SDInternalMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E818BAE74BCEEB70641BF3D42B236 /* SDInternalMacros.m */; };
-		AF4D1BAB55291A0ECFF3859A826D9A26 /* TBMemeryUse.h in Headers */ = {isa = PBXBuildFile; fileRef = 77FA9A89A84002BAF8E4CDEE9EE8A764 /* TBMemeryUse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B13DF6C52581072CDE880A07270D80C9 /* SDWebImageDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2235645132D98512158CC57C1A45B178 /* SDWebImageDefine.m */; };
 		B14EB82CF4A3EA74730C385ECEC1E025 /* SDImageCachesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F97FC9CA0133DBF2FF82E71005530F9 /* SDImageCachesManager.m */; };
 		B2128EFF9529E6966387B59647179684 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 448E6FC2D22EFE0B630862BFE2129B36 /* SDWebImageManager.m */; };
@@ -193,7 +195,6 @@
 		D165FFDA62FE745BB3F808931F307053 /* TBDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EAF168DEAE5FD0D05278F6A0FFEC43 /* TBDeviceInfo.m */; };
 		D4A0390355773D9EA4FF9A9A72F63299 /* SDImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E008B9D5F3C80D7175E6736F09F5A170 /* SDImageCodersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4BBC83BEFC1D4FE516CAF56ADC4518F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025E8775C16E1E3EFFDDFAD9D8EDDF0D /* Foundation.framework */; };
-		D51A4B59BDBC0FEFADE68B8DE973BD84 /* TBCupUse.h in Headers */ = {isa = PBXBuildFile; fileRef = B285DDDB55CC831560996BE1843F2841 /* TBCupUse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D760D8C1A8F0B0E21553050A605D7772 /* SDImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E0BDAFAB058F7F661B5DA114A9D653 /* SDImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D88D01DC27907FB6B1862384B70722FD /* TBCycleInfoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BC1842C0E8DD8E6F9A9A8975065C275F /* TBCycleInfoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D91E96CC8FA7D84B4327A1A8641670EC /* TBCycleViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 866E6AF108E92ACCC73B687DDBF9277F /* TBCycleViewHelper.m */; };
@@ -206,7 +207,6 @@
 		E0108CBE45353D64552D5A1E4BF93FC9 /* SDImageCachesManagerOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6232D30877077A4B5E5B2BC2896A6755 /* SDImageCachesManagerOperation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E1F537C3F58968548B9BC3665A1C0E5E /* TBNetDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564C9D19680648BEF950B0615A5E1D4F /* TBNetDetailController.m */; };
 		E200E3645E90B13AA4B5136E39D99A52 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF8ED1627E69C1326C7C5C1A6A22720 /* ImageIO.framework */; };
-		E2D2A74B8CCE33B932866DE4850C316A /* TBMemeryUse.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCB685C6C6676DE6DEEAFA6829D9513 /* TBMemeryUse.m */; };
 		E3134A5DCAD73B31584488AA4E02186B /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F8FBD17EF28FF20E37FD4EAD60F41D55 /* SDWebImagePrefetcher.m */; };
 		E3FB1238F43B0CE746E5207AA0E4CD6F /* SDImageGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A6DC3AC82A428F727154D1924F4ACE6 /* SDImageGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E571F3E4E9B283DA779B8E26CAAD122B /* TBPerformanceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5297A69822E9AD05B38804F2CD79D8 /* TBPerformanceUtils.m */; };
@@ -308,7 +308,6 @@
 		1AB3EFC5E4CC51960C4C3D6CCA7B5F14 /* SDMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDMemoryCache.h; path = SDWebImage/SDMemoryCache.h; sourceTree = "<group>"; };
 		1B802CB2E1710B3445CB1B02D986C984 /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/SDImageLoadersManager.h; sourceTree = "<group>"; };
 		1F97FC9CA0133DBF2FF82E71005530F9 /* SDImageCachesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManager.m; path = SDWebImage/SDImageCachesManager.m; sourceTree = "<group>"; };
-		1FD1A0614EE8FDDFF73DA173F34BBE0A /* TBCupUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBCupUse.m; sourceTree = "<group>"; };
 		21EAF168DEAE5FD0D05278F6A0FFEC43 /* TBDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBDeviceInfo.m; sourceTree = "<group>"; };
 		2235645132D98512158CC57C1A45B178 /* SDWebImageDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDefine.m; path = SDWebImage/SDWebImageDefine.m; sourceTree = "<group>"; };
 		22C290026A94DBB39E4709B76FD87034 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "TBToolCategory/Classes/UIColor+Hex.h"; sourceTree = "<group>"; };
@@ -391,7 +390,6 @@
 		735F9DAD03374002AE808279F0ED9420 /* TBDirctoryModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBDirctoryModel.m; sourceTree = "<group>"; };
 		741DDA3D6C0C215858B2F2AB47D402A3 /* NSURLResponse+DoggerMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+DoggerMonitor.h"; sourceTree = "<group>"; };
 		75472B12999FF910E9DA1292C83EE6DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		77FA9A89A84002BAF8E4CDEE9EE8A764 /* TBMemeryUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBMemeryUse.h; sourceTree = "<group>"; };
 		780C93C933DF6F4BCB5534BE915178A8 /* UILabel+WPAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+WPAdd.h"; path = "TBToolCategory/Classes/UILabel+WPAdd.h"; sourceTree = "<group>"; };
 		792D19680F39C045841554CA766A931B /* TBDirctoryController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBDirctoryController.m; sourceTree = "<group>"; };
 		7AE4E44BA028790B320BBCF4EAFBE770 /* TBNetMonitorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBNetMonitorUtil.m; sourceTree = "<group>"; };
@@ -444,6 +442,10 @@
 		A4F24370B0238EA27C502E6D14CD9110 /* Pods-TBPerformanceView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBPerformanceView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A62FC3F3230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TBPerformanceBoardSwift.swift; path = TBPerformanceView/Classes/TBPerformanceBoardSwift.swift; sourceTree = "<group>"; };
 		A62FC3F5230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TBPerformanceView-Bridging-Header.h"; path = "TBPerformanceView/Classes/TBPerformanceView-Bridging-Header.h"; sourceTree = "<group>"; };
+		A62FC3F8230A4BFA003BEC4C /* TBMemeryUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMemeryUse.m; sourceTree = "<group>"; };
+		A62FC3F9230A4BFA003BEC4C /* TBCupUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCupUse.h; sourceTree = "<group>"; };
+		A62FC3FA230A4BFA003BEC4C /* TBMemeryUse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMemeryUse.h; sourceTree = "<group>"; };
+		A62FC3FB230A4BFA003BEC4C /* TBCupUse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCupUse.m; sourceTree = "<group>"; };
 		A63A9D562309698900C17B77 /* TBWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBWindow.h; sourceTree = "<group>"; };
 		A63A9D572309698900C17B77 /* TBWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBWindow.m; sourceTree = "<group>"; };
 		A63A9D5A23096A5F00C17B77 /* TBWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBWindowViewController.h; sourceTree = "<group>"; };
@@ -458,7 +460,6 @@
 		A9C6111A4D0A23EDB9D79D6207A8FD2F /* Pods-TBPerformanceView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBPerformanceView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA54B9FA0099D3956FA2C7051C71B941 /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/SDImageCoder.m; sourceTree = "<group>"; };
 		ACBFE20417B9F3D43734ADC6BAC1EACB /* TBCycleViewHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TBCycleViewHelper.h; path = TBPerformanceView/Classes/TBCycleViewHelper.h; sourceTree = "<group>"; };
-		ACCB685C6C6676DE6DEEAFA6829D9513 /* TBMemeryUse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TBMemeryUse.m; sourceTree = "<group>"; };
 		AD92EC998A977678F43E6895674D8ABB /* Pods-TBPerformanceView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBPerformanceView_Example-Info.plist"; sourceTree = "<group>"; };
 		AF3FA9F9C997FAB63691A2D551C66FF7 /* LMCheckObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LMCheckObject.h; path = TBToolCategory/Classes/LMCheckObject.h; sourceTree = "<group>"; };
 		AFE27B52E793CB04252563F7728692BC /* TBDirctoryModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBDirctoryModel.h; sourceTree = "<group>"; };
@@ -467,7 +468,6 @@
 		B18E7828039ECD5700A24C83B0F8813B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B1912A130DBFE4F9FDDF8B9B5EE29483 /* SDWebImageDownloaderRequestModifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderRequestModifier.m; path = SDWebImage/SDWebImageDownloaderRequestModifier.m; sourceTree = "<group>"; };
 		B1D447E3A38136E239B87A48AD69533F /* TBToolCategory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBToolCategory-prefix.pch"; sourceTree = "<group>"; };
-		B285DDDB55CC831560996BE1843F2841 /* TBCupUse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TBCupUse.h; sourceTree = "<group>"; };
 		B3550D1574018FCBB6920C3E236FB237 /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/SDWebImageTransition.h; sourceTree = "<group>"; };
 		B3556BF874E211F0BDD557301F37A2AA /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		B3698C06767B74CB0FB16BA0B3CB9789 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/NSButton+WebCache.m"; sourceTree = "<group>"; };
@@ -697,9 +697,9 @@
 		8AFB6CC5117079110AA49376871F47B9 /* TBPerformanceView */ = {
 			isa = PBXGroup;
 			children = (
+				A62FC3F7230A4BFA003BEC4C /* AppNormalPerformance */,
 				A63A9D5323094F5B00C17B77 /* UserInterface */,
 				A69972FF22EB6FE500A393A2 /* SandBox */,
-				A69972FE22EB6E8F00A393A2 /* AppNormalPerformance */,
 				A6C1742222D5B3BA007DD285 /* AppDetail */,
 				98E783C36974EBB9022C1B71BB79752A /* PrefixHeader.pch */,
 				BE42AF836C2C17CDE1B312FCF101BDE2 /* TBBoardView.h */,
@@ -778,6 +778,18 @@
 			path = TBPerformanceView/Classes/CheckLayer;
 			sourceTree = "<group>";
 		};
+		A62FC3F7230A4BFA003BEC4C /* AppNormalPerformance */ = {
+			isa = PBXGroup;
+			children = (
+				A62FC3F8230A4BFA003BEC4C /* TBMemeryUse.m */,
+				A62FC3F9230A4BFA003BEC4C /* TBCupUse.h */,
+				A62FC3FA230A4BFA003BEC4C /* TBMemeryUse.h */,
+				A62FC3FB230A4BFA003BEC4C /* TBCupUse.m */,
+			);
+			name = AppNormalPerformance;
+			path = TBPerformanceView/Classes/AppNormalPerformance;
+			sourceTree = "<group>";
+		};
 		A63A9D5323094F5B00C17B77 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -787,17 +799,6 @@
 				A63A9D5B23096A5F00C17B77 /* TBWindowViewController.m */,
 			);
 			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		A69972FE22EB6E8F00A393A2 /* AppNormalPerformance */ = {
-			isa = PBXGroup;
-			children = (
-				B285DDDB55CC831560996BE1843F2841 /* TBCupUse.h */,
-				1FD1A0614EE8FDDFF73DA173F34BBE0A /* TBCupUse.m */,
-				77FA9A89A84002BAF8E4CDEE9EE8A764 /* TBMemeryUse.h */,
-				ACCB685C6C6676DE6DEEAFA6829D9513 /* TBMemeryUse.m */,
-			);
-			path = AppNormalPerformance;
 			sourceTree = "<group>";
 		};
 		A69972FF22EB6FE500A393A2 /* SandBox */ = {
@@ -1167,20 +1168,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E5F8DC1BA048975639880ACAC5B6D0 /* CheckLayerManager.h in Headers */,
+				A62FC3FE230A4BFA003BEC4C /* TBMemeryUse.h in Headers */,
 				3938597E7AD757F2CFBD40763DD2CA15 /* CheckLayerView.h in Headers */,
 				0809D79CFB8B2DECD262054D66DDAF13 /* NSURLResponse+DoggerMonitor.h in Headers */,
 				45C28052CB84971B2DD5BB8AC1CF3C9A /* TBBoardView.h in Headers */,
-				D51A4B59BDBC0FEFADE68B8DE973BD84 /* TBCupUse.h in Headers */,
 				D88D01DC27907FB6B1862384B70722FD /* TBCycleInfoViewController.h in Headers */,
 				A6C1742A22D5B9B2007DD285 /* DetailTableViewCell.h in Headers */,
 				99A8C51437DF24349355FA64BF667EC4 /* TBCycleViewHelper.h in Headers */,
+				A62FC3FD230A4BFA003BEC4C /* TBCupUse.h in Headers */,
 				843C55ECEEB72169BEFF9E384E67D3C5 /* TBDeviceInfo.h in Headers */,
 				A63A9D5C23096A5F00C17B77 /* TBWindowViewController.h in Headers */,
 				560F8FF138781E8EC581954239109CD4 /* TBDirctoryController.h in Headers */,
 				9610DFA77FA92DAFFCB4C8BFBA852432 /* TBDirctoryModel.h in Headers */,
 				CC225517925AE2407A937A355EBBCD29 /* TBFileManager.h in Headers */,
 				A5C67537FC8DAEC71616E7F4940FB01E /* TBInternalRequestState.h in Headers */,
-				AF4D1BAB55291A0ECFF3859A826D9A26 /* TBMemeryUse.h in Headers */,
 				A62FC3F6230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h in Headers */,
 				F557CDEEF68FCBCDFC3CE295EDD95632 /* TBNetDetailController.h in Headers */,
 				23C5C14270C05AC25A724798A9BABE6F /* TBNetMonitorDetailController.h in Headers */,
@@ -1447,13 +1448,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A62FC3FF230A4BFA003BEC4C /* TBCupUse.m in Sources */,
 				4A6C0583A89B53B38F2346D092C8A1B8 /* CheckLayerManager.m in Sources */,
 				CAF098C2E6DCAFFAE4B9BB4F41BC5AB7 /* CheckLayerView.m in Sources */,
 				7090BC203ABC78EED01A4C024AEED9AD /* NSURLResponse+DoggerMonitor.m in Sources */,
 				A6C1742B22D5B9B2007DD285 /* DetailTableViewCell.m in Sources */,
 				8066D5D1FF839CF695E99CEC8F406829 /* PrefixHeader.pch in Sources */,
 				3C074C445220D90E17BB0439CDD748E4 /* TBBoardView.m in Sources */,
-				9758A0C7448E8D81C9CCA5F8E2474D54 /* TBCupUse.m in Sources */,
 				E5FDE092EF222782882CD41849D7C682 /* TBCycleInfoViewController.m in Sources */,
 				D91E96CC8FA7D84B4327A1A8641670EC /* TBCycleViewHelper.m in Sources */,
 				D165FFDA62FE745BB3F808931F307053 /* TBDeviceInfo.m in Sources */,
@@ -1461,7 +1462,6 @@
 				19FCE49C93769ABD4A9242CD0707471C /* TBDirctoryModel.m in Sources */,
 				8EC6AE2FA6720B804AD31A6B8BBB0CB4 /* TBFileManager.m in Sources */,
 				040AB6B7DD845522A17EACCFB1E31491 /* TBInternalRequestState.m in Sources */,
-				E2D2A74B8CCE33B932866DE4850C316A /* TBMemeryUse.m in Sources */,
 				E1F537C3F58968548B9BC3665A1C0E5E /* TBNetDetailController.m in Sources */,
 				7C0B30B67365F35F7F32CF588EB16691 /* TBNetMonitorDetailController.m in Sources */,
 				A62FC3F4230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift in Sources */,
@@ -1475,6 +1475,7 @@
 				1966891281EA4379E565C8CFECA7B91F /* TBNetSummaryInfo.m in Sources */,
 				A78732CA2C5BB0AFD5BE7D5D9E9ABB85 /* TBNetSummaryInfoView.m in Sources */,
 				54AFF8D4DA37953BABC075CC787A40C0 /* TBNetUrlProtocol.m in Sources */,
+				A62FC3FC230A4BFA003BEC4C /* TBMemeryUse.m in Sources */,
 				4DCB888A47077179C7EAD17909EEBCA3 /* TBNetWorkObserver.m in Sources */,
 				A6C1742722D5B3D0007DD285 /* AppDetailInfoController.m in Sources */,
 				1CFE1DFC02303437432F13688D4BE18A /* TBPerformanceBoard.m in Sources */,
