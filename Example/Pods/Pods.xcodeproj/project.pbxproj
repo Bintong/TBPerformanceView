@@ -128,6 +128,8 @@
 		A512750A4B3858478A3040102E510496 /* UILabel+WPAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 780C93C933DF6F4BCB5534BE915178A8 /* UILabel+WPAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5804E961E1997EDB1CA7B0E38AE9C46 /* TBNetSummaryInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6324D92C2ED1823EEC552A8B4F6953 /* TBNetSummaryInfoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5C67537FC8DAEC71616E7F4940FB01E /* TBInternalRequestState.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D2CED6AE38C57102F6327991DEA920 /* TBInternalRequestState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A62FC3F4230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FC3F3230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift */; };
+		A62FC3F6230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = A62FC3F5230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h */; };
 		A63A9D582309698900C17B77 /* TBWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A63A9D562309698900C17B77 /* TBWindow.h */; };
 		A63A9D592309698900C17B77 /* TBWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A63A9D572309698900C17B77 /* TBWindow.m */; };
 		A63A9D5C23096A5F00C17B77 /* TBWindowViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A63A9D5A23096A5F00C17B77 /* TBWindowViewController.h */; };
@@ -440,6 +442,8 @@
 		A336F03FBBDABFC86716AAE868CC7DCF /* TPerformanceDetailController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPerformanceDetailController.m; path = TBPerformanceView/Classes/TPerformanceDetailController.m; sourceTree = "<group>"; };
 		A3CFF454C9039E47DD83C6418062DA9D /* SDImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageFrame.m; path = SDWebImage/SDImageFrame.m; sourceTree = "<group>"; };
 		A4F24370B0238EA27C502E6D14CD9110 /* Pods-TBPerformanceView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBPerformanceView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A62FC3F3230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TBPerformanceBoardSwift.swift; path = TBPerformanceView/Classes/TBPerformanceBoardSwift.swift; sourceTree = "<group>"; };
+		A62FC3F5230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "TBPerformanceView-Bridging-Header.h"; path = "TBPerformanceView/Classes/TBPerformanceView-Bridging-Header.h"; sourceTree = "<group>"; };
 		A63A9D562309698900C17B77 /* TBWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBWindow.h; sourceTree = "<group>"; };
 		A63A9D572309698900C17B77 /* TBWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBWindow.m; sourceTree = "<group>"; };
 		A63A9D5A23096A5F00C17B77 /* TBWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBWindowViewController.h; sourceTree = "<group>"; };
@@ -708,6 +712,8 @@
 				EFCAD60B081F606E28F00B8D4C0ADAB4 /* TBPerformanceBoard.m */,
 				39B35FA73BA0F28A47BE6BF73B381935 /* TPerformanceDetailController.h */,
 				A336F03FBBDABFC86716AAE868CC7DCF /* TPerformanceDetailController.m */,
+				A62FC3F3230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift */,
+				A62FC3F5230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h */,
 				A083628B0DDAC2924200F6331CA3EF0C /* CheckLayer */,
 				FED5B9A7E775164902DAB5BDFEEB6BBC /* NetMeter */,
 				9064F902F9EA6A556FD7BD8E7049B4E2 /* Pod */,
@@ -1175,6 +1181,7 @@
 				CC225517925AE2407A937A355EBBCD29 /* TBFileManager.h in Headers */,
 				A5C67537FC8DAEC71616E7F4940FB01E /* TBInternalRequestState.h in Headers */,
 				AF4D1BAB55291A0ECFF3859A826D9A26 /* TBMemeryUse.h in Headers */,
+				A62FC3F6230A3AD1003BEC4C /* TBPerformanceView-Bridging-Header.h in Headers */,
 				F557CDEEF68FCBCDFC3CE295EDD95632 /* TBNetDetailController.h in Headers */,
 				23C5C14270C05AC25A724798A9BABE6F /* TBNetMonitorDetailController.h in Headers */,
 				A63A9D582309698900C17B77 /* TBWindow.h in Headers */,
@@ -1305,6 +1312,9 @@
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
+					1AC3AC9EB27D9A43CFEBDF4C5D7BB1F8 = {
+						LastSwiftMigration = 1030;
+					};
 					229F4E49508012EBBDECBE781D4866A2 = {
 						LastSwiftMigration = 1030;
 					};
@@ -1454,6 +1464,7 @@
 				E2D2A74B8CCE33B932866DE4850C316A /* TBMemeryUse.m in Sources */,
 				E1F537C3F58968548B9BC3665A1C0E5E /* TBNetDetailController.m in Sources */,
 				7C0B30B67365F35F7F32CF588EB16691 /* TBNetMonitorDetailController.m in Sources */,
+				A62FC3F4230A3A5A003BEC4C /* TBPerformanceBoardSwift.swift in Sources */,
 				6ACFBCD7D1D17C083465FD377D5F3C9A /* TBNetMonitorManager.m in Sources */,
 				CE3C5CF30A88491AE6C00D201FB3F5BA /* TBnetMonitorModel.m in Sources */,
 				156583E45000249BD8D34301CCE554D5 /* TBNetMonitorUtil.m in Sources */,
@@ -1681,6 +1692,7 @@
 			baseConfigurationReference = 982C1E2A1FCBB0705334CBBE3E45BB29 /* Pods-TBPerformanceView_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1703,6 +1715,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1811,6 +1825,7 @@
 			baseConfigurationReference = 61B0C90548D79867FD95967570C3134B /* Pods-TBPerformanceView_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1833,6 +1848,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
